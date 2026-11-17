@@ -1,0 +1,28 @@
+name: "Edge Case"
+designer: "Tejas"
+license: "OFL"
+category: "DISPLAY"
+source {
+  repository_url: "https://github.com/3sidedcoin/edge-case-typeface"
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "fonts/ttf/EdgeCase-Regular.ttf"
+    dest_file: "EdgeCase-Regular.ttf"
+  }
+  files {
+    source_file: "DESCRIPTION.en_us.html"
+    dest_file: "DESCRIPTION.en_us.html"
+  }
+  files {
+    source_file: "documentation/article/ARTICLE.en_us.html"
+    dest_file: "article/ARTICLE.en_us.html"
+  }
+  branch: "main"
+}
+subsets: "latin"
+subsets: "latin-ext"
+subsets: "menu"
+classifications: "DISPLAY"

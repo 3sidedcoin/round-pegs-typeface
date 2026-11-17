@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.007
+- Copyright record points to the real repo; added Google Fonts packaging drafts
+
 ## 1.006
 - Redrawn ª
 
