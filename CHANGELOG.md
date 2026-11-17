@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.008
+- Added Ǿ ǿ Ẽ ẽ ſ ʻ ʼ Ĳ ĳ Ŀ ŀ for language coverage (FontBakery: 0 FAIL, 0 ERROR)
+
 ## 1.007
 - Copyright record points to the real repo; added Google Fonts packaging drafts
 

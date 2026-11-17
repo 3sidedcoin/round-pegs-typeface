@@ -113,11 +113,11 @@ for mcp, stem in MARKS.items():
 cmap_t = [t for t in font['cmap'].tables if t.isUnicode()]
 cm0 = font.getBestCmap()
 composed = []
-for cp in list(range(0xC0, 0x250)) + [0x1E80, 0x1E82, 0x1E84, 0x1EF2]:
+for cp in list(range(0xC0, 0x250)) + [0x1E80, 0x1E82, 0x1E84, 0x1EF2, 0x1EBC]:
     ch = chr(cp)
     if not ch.isupper(): continue
     d = unicodedata.normalize('NFD', ch)
-    if not (len(d) == 2 and 'A' <= d[0] <= 'Z' and ord(d[1]) in MARKS): continue
+    if not (len(d) == 2 and ('A' <= d[0] <= 'Z' or d[0] == '\u00d8') and ord(d[1]) in MARKS): continue
     base = cm0[ord(d[0])]
     adv_b, lsb_b = font['hmtx'][base]
     bb = BoundsPen(gs); gs[base].draw(bb)
@@ -197,6 +197,15 @@ qb = BoundsPen(None); qd.draw(qb); cb = BoundsPen(None); cmm.draw(cb)
 low = PPath(); qd.draw(TransformPen(low.getPen(), (1, 0, 0, 1, 0, cb.bounds[1] - qb.bounds[1])))
 put_mark_glyph('quotedblbase', [0x201E], low, 0, font['hmtx'][cm0[0x201D]][0])
 for t in cmap_t: t.cmap[0x201A] = cm0[ord(',')]   # single low-9 quote = comma
+# --- extra letters for language coverage: long s, modifier turned comma/apostrophe, IJ ligature, L with middle dot ----------
+for t in cmap_t:
+    t.cmap[0x17F] = cm0[ord('S')]; t.cmap[0x2BB] = cm0[0x2018]; t.cmap[0x2BC] = cm0[0x27]
+def shifted(n, dx):
+    q_ = PPath(); gs[n].draw(TransformPen(q_.getPen(), (1, 0, 0, 1, dx, 0))); return q_
+for gname_, cps_, a_, b_ in (('IJ', [0x132, 0x133], cm0[ord('I')], cm0[ord('J')]), ('Ldot', [0x13F, 0x140], cm0[ord('L')], cm0[0xB7])):
+    adv_a = font['hmtx'][a_][0]; adv_ab = adv_a + font['hmtx'][b_][0]
+    u_ = pop(gpath(a_), shifted(b_, adv_a), POp.UNION); u_.simplify(fix_winding=True, clockwise=True)
+    put_mark_glyph(gname_, cps_, u_, 0, adv_ab)
 dc = PPath()
 for i_ in (0, 2, 4):
     for j_ in (0, 2, 4):
