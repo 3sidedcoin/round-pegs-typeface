@@ -1,6 +1,6 @@
 # Google Fonts submission checklist
 
-- [ ] Repo is public: https://github.com/3sidedcoin/edge-case-typeface
+- [ ] Repo is public: https://github.com/3sidedcoin/round-pegs-typeface
 - [ ] OFL.txt in root (done), copyright line matches font name record
 - [ ] Run `fontbakery check-googlefonts fonts/ttf/RoundPegs-Regular.ttf` with network and fix new issues
 - [ ] Tag a release (v1.007) with the font files attached

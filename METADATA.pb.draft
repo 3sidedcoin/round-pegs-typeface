@@ -3,7 +3,7 @@ designer: "Tejas"
 license: "OFL"
 category: "DISPLAY"
 source {
-  repository_url: "https://github.com/3sidedcoin/edge-case-typeface"
+  repository_url: "https://github.com/3sidedcoin/round-pegs-typeface"
   files {
     source_file: "OFL.txt"
     dest_file: "OFL.txt"

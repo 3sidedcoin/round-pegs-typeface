@@ -2,7 +2,7 @@ Title: Add Round Pegs
 
 **Font Project Git Repo URL:**
 
-https://github.com/3sidedcoin/edge-case-typeface
+https://github.com/3sidedcoin/round-pegs-typeface
 
 **Super short description of the Font Family:**
 
