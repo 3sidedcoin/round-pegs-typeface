@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.006
+- Redrawn ª
+
+## 1.005
+- Added © ® ª º; all Google Fonts required codepoints now covered
+
 ## 1.004
 - New ¶ with a visible bowl
 

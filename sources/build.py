@@ -88,6 +88,8 @@ def snap(v):
 
 
 MAP.update({
+    'copyright': ('copyright', [0xA9]), 'registered': ('registered', [0xAE]),
+    'ordfeminine': ('ordfeminine', [0xAA]), 'ordmasculine': ('ordmasculine', [0xBA]),
     'degree': ('degree', [0xB0]), 'section': ('section', [0xA7]), 'pilcrow': ('paragraph', [0xB6]),
     'guillemet-left': ('guillemotleft', [0xAB]), 'guillemet-right': ('guillemotright', [0xBB]),
     'guilsingle-left': ('guilsinglleft', [0x2039]), 'guilsingle-right': ('guilsinglright', [0x203A]),
@@ -105,13 +107,15 @@ def rect_d(x, y, w, h, r):
             f'H{x+r}A{r} {r} 0 0 1 {x} {y+h-r}V{y+r}A{r} {r} 0 0 1 {x+r} {y}Z')
 
 
-CROP = {'degree': (12, 24), 'guillemet-left': (4, 20), 'guillemet-right': (4, 20), 'pilcrow': (4, 20), 'section': (4, 20), 'guilsingle-left': (12, 20), 'guilsingle-right': (12, 20)}  # frames with side margin: crop to ink columns
+BASE_OVERRIDE = {'ordfeminine': 24, 'ordmasculine': 24, 'registered': 24, 'copyright': 24}  # ink bottom sits on baseline in these 32-high frames
+CROP = {'ordfeminine': (4, 20), 'ordmasculine': (4, 20), 'registered': (4, 24), 'copyright': (4, 24), 'degree': (12, 24), 'guillemet-left': (4, 20), 'guillemet-right': (4, 20), 'pilcrow': (4, 20), 'section': (4, 20), 'guilsingle-left': (12, 20), 'guilsingle-right': (12, 20)}  # frames with side margin: crop to ink columns
 
 
 def load_svg(stem):
     root = ET.parse(os.path.join(SVG_DIR, stem + '.svg')).getroot()
     W, H = float(root.get('width')), float(root.get('height'))
     base = {28: 24, 32: 28, 36: 32, 40: 32, 44: 32}.get(H, H)  # 28-unit (7-row) frames: baseline y=24; 36-unit (9-row, accent + descender) frames: baseline y=32; others: bottom
+    base = BASE_OVERRIDE.get(stem, base)
     shapes = []  # (kind, Path)
     for el in root:
         tag = el.tag.split('}')[1]
