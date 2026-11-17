@@ -40,7 +40,7 @@ Glyphs are SVGs in [`sources/svg`](sources/svg), drawn on a 4-unit-per-cell grid
 ```sh
 pip install -r requirements.txt
 python3 -I sources/build.py
-python3 -I sources/release.py "Edge Case" 1.003 https://github.com/YOUR-USERNAME/edge-case
+python3 -I sources/release.py "Edge Case" 1.004 https://github.com/YOUR-USERNAME/edge-case
 ```
 
 Output goes to `build-out/`. See [`documentation/DESIGN.md`](documentation/DESIGN.md) for the drawing rules.

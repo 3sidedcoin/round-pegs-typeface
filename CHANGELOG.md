@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.004
+- New ¶ with a visible bowl
+
 ## 1.003
 - Added § ¶ « » ‹ › °
 
