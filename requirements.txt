@@ -1,4 +1,6 @@
-fonttools[ufo]
+fonttools
 skia-pathops
 uharfbuzz
 Pillow
+fontmake
+ufoLib2

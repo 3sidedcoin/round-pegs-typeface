@@ -1,8 +1,8 @@
-# Edge Case
+# Round Pegs
 
-![Edge Case specimen](documentation/specimen.png)
+![Round Pegs specimen](documentation/specimen.png)
 
-**Edge Case** is a free, open-source pixel typeface with rounded cells and concave
+**Round Pegs** is a free, open-source pixel typeface with rounded cells and concave
 fillets where cells join diagonally. It is drawn on a grid of whole and half cells,
 so it stays crisp at 16px multiples. It is a capitals-only design: lowercase letters
 map to the same shapes.
@@ -28,22 +28,22 @@ Turn off font smoothing or use `image-rendering: pixelated` canvases for exact p
 
 ```css
 @font-face {
-  font-family: "Edge Case";
-  src: url("fonts/webfonts/EdgeCase-Regular.woff2") format("woff2");
+  font-family: "Round Pegs";
+  src: url("fonts/webfonts/RoundPegs-Regular.woff2") format("woff2");
 }
 ```
 
 ## Building
 
-Glyphs are SVGs in [`sources/svg`](sources/svg), drawn on a 4-unit-per-cell grid.
+The editable source is [`sources/RoundPegs-Regular.ufo`](sources/RoundPegs-Regular.ufo) (open it in Glyphs, RoboFont, or any UFO editor).
+The glyph drawings it came from are in [`sources/svg`](sources/svg), one SVG per glyph, on a 4-unit-per-cell grid.
 
 ```sh
 pip install -r requirements.txt
-python3 -I sources/build.py
-python3 -I sources/release.py "Edge Case" 1.008 https://github.com/3sidedcoin/edge-case-typeface
+sh sources/build.sh
 ```
 
-Output goes to `build-out/`. See [`documentation/DESIGN.md`](documentation/DESIGN.md) for the drawing rules.
+Output goes to `build-out/`. See [`sources/tools/README.md`](sources/tools/README.md) for the older SVG import scripts and [`documentation/DESIGN.md`](documentation/DESIGN.md) for the drawing rules.
 
 ## Contributing
 

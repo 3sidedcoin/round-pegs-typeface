@@ -1,4 +1,4 @@
-name: "Edge Case"
+name: "Round Pegs"
 designer: "Tejas"
 license: "OFL"
 category: "DISPLAY"
@@ -9,8 +9,8 @@ source {
     dest_file: "OFL.txt"
   }
   files {
-    source_file: "fonts/ttf/EdgeCase-Regular.ttf"
-    dest_file: "EdgeCase-Regular.ttf"
+    source_file: "fonts/ttf/RoundPegs-Regular.ttf"
+    dest_file: "RoundPegs-Regular.ttf"
   }
   files {
     source_file: "DESCRIPTION.en_us.html"
