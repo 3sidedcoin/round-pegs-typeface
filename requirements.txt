@@ -1,0 +1,4 @@
+fonttools[ufo]
+skia-pathops
+uharfbuzz
+Pillow
