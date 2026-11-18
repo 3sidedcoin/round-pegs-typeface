@@ -66,10 +66,28 @@ feature mark {
   pos base Y <anchor 640 0> mark @RIGHT;
   pos base Z <anchor 320 0> mark @TOP;
   pos base Z <anchor 640 0> mark @RIGHT;
+  pos base Aogonek <anchor 256 0> mark @TOP;
+  pos base Aogonek <anchor 512 0> mark @RIGHT;
+  pos base Edotaccent <anchor 256 256> mark @TOP;
+  pos base Edotaccent <anchor 512 0> mark @RIGHT;
+  pos base Eogonek <anchor 256 0> mark @TOP;
+  pos base Eogonek <anchor 512 0> mark @RIGHT;
+  pos base Iogonek <anchor 192 0> mark @TOP;
+  pos base Iogonek <anchor 384 0> mark @RIGHT;
+  pos base Idotaccent <anchor 192 256> mark @TOP;
+  pos base Idotaccent <anchor 384 0> mark @RIGHT;
+  pos base Umacron <anchor 320 256> mark @TOP;
+  pos base Umacron <anchor 640 0> mark @RIGHT;
+  pos base Uogonek <anchor 320 0> mark @TOP;
+  pos base Uogonek <anchor 640 0> mark @RIGHT;
   pos base uni25CC <anchor 320 0> mark @TOP;
   pos base uni25CC <anchor 640 0> mark @RIGHT;
 } mark;
 
+feature mkmk {
+  pos mark uni0307 <anchor 256 256> mark @TOP;
+} mkmk;
+
 table GDEF {
-  GlyphClassDef [A B C D E F G H I J K L M N O P Q R S T U V W X Y Z uni25CC], , [gravecomb acutecomb uni0302 tildecomb uni0308 uni0304 uni0306 uni0307 uni030B uni030C uni030A uni0326 uni0327 uni0328], ;
+  GlyphClassDef [A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Aogonek Edotaccent Eogonek Iogonek Idotaccent Umacron Uogonek uni25CC], , [gravecomb acutecomb uni0302 tildecomb uni0308 uni0304 uni0306 uni0307 uni030B uni030C uni030A uni0326 uni0327 uni0328], ;
 } GDEF;

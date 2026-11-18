@@ -61,6 +61,16 @@ for b, br in zip(bases, sub.BaseArray.BaseRecord):
         fea.append(f'  pos base {b} <anchor {a.XCoordinate} {a.YCoordinate}> mark @{names[c]};')
 fea.append('} mark;')
 fea.append('')
+# mark-to-mark (tone marks stacked over a dot above)
+mk_sub = gpos.LookupList.Lookup[1].SubTable[0]
+assert gpos.LookupList.Lookup[1].LookupType == 6
+fea.append('feature mkmk {')
+for g2, rec2 in zip(mk_sub.Mark2Coverage.glyphs, mk_sub.Mark2Array.Mark2Record):
+    for a2 in rec2.Mark2Anchor:
+        if a2 is not None:
+            fea.append(f'  pos mark {g2} <anchor {a2.XCoordinate} {a2.YCoordinate}> mark @TOP;')
+fea.append('} mkmk;')
+fea.append('')
 gd = f['GDEF'].table.GlyphClassDef.classDefs
 mk = [g for g in order if gd.get(g) == 3]; bs = [g for g in order if gd.get(g) == 1]
 fea.append('table GDEF {')

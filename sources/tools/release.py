@@ -156,6 +156,7 @@ print(''.join(c for c, _ in composed))
 SPACING = {0xA8: 0x308, 0xB4: 0x301, 0xAF: 0x304, 0xB8: 0x327, 0x2C6: 0x302, 0x2C7: 0x30C, 0x2D8: 0x306, 0x2D9: 0x307,
            0x2DA: 0x30A, 0x2DB: 0x328, 0x2DC: 0x303, 0x2DD: 0x30B}
 COMB = []   # (glyph name, frame width in font units, right-anchored?)
+COMB_NAME = {}
 def put_mark_glyph(gname, cp_list, mp, fw, adv):
     rr = RecordingPen(); mp.draw(rr)
     pen = T2CharStringPen(adv, None)
@@ -178,9 +179,13 @@ for scp, mcp in SPACING.items():
 for mcp, (mp, fw) in mark_data.items():
     gname = uniq(mcp, '.cmb') if UV2AGL.get(mcp, '') not in order else f'uni{mcp:04X}'
     put_mark_glyph(gname, [mcp], mp, fw, 0)
-    COMB.append((gname, fw, mcp in ANCHOR_RIGHT))
+    COMB.append((gname, fw, mcp in ANCHOR_RIGHT)); COMB_NAME[mcp] = (gname, fw)
 font.setGlyphOrder(order)
 BASES = [cm0[c] for c in range(65, 91)]
+cm1 = font.getBestCmap()
+OGON_BASES = [cm1[c] for c in (0x104, 0x118, 0x12E, 0x172)]      # Lithuanian: ogonek below, tone mark above
+RAISED_BASES = [cm1[c] for c in (0x116, 0x130, 0x16A)]                  # Lithuanian: dot above, tone mark stacked over it
+STACK = 2 * 128   # 2 cells up: the dot is 1 cell tall, plus a 1-cell gap, matches the cap-to-mark gap
 
 # --- derived glyphs: dotless i/j (caps-only font: aliases), minus, low quotes, dotted circle --------------------------
 for cp_, src_ in ((0x131, 'I'), (0x237, 'J')):
@@ -276,7 +281,7 @@ def scale_font(path, to_upm=1024, from_cell=140):
     for n in f.getGlyphOrder():
         bp = BoundsPen(g); g[n].draw(bp)
         if bp.bounds: ys += [bp.bounds[1], bp.bounds[3]]
-    f['OS/2'].usWinAscent, f['OS/2'].usWinDescent = int(max(ys)), int(-min(ys))
+    f['OS/2'].usWinAscent, f['OS/2'].usWinDescent = int(max(ys)) + STACK, int(-min(ys))
     f['OS/2'].recalcAvgCharWidth(f)
     f.save(path)
     return k
@@ -293,7 +298,19 @@ def add_mark_gpos(path):
         bb = BoundsPen(gl); gl[b].draw(bb)
         lines.append(f'  pos base {b} <anchor {(adv - 128) // 2} 0> mark @TOP;')
         lines.append(f'  pos base {b} <anchor {int(bb.bounds[2])} 0> mark @RIGHT;')
+    for b in OGON_BASES:
+        adv = h[b][0]; bb = BoundsPen(gl); gl[b].draw(bb)
+        lines.append(f'  pos base {b} <anchor {(adv - 128) // 2} 0> mark @TOP;')
+        lines.append(f'  pos base {b} <anchor {int(bb.bounds[2])} 0> mark @RIGHT;')
+    for b in RAISED_BASES:
+        adv = h[b][0]; bb = BoundsPen(gl); gl[b].draw(bb)
+        lines.append(f'  pos base {b} <anchor {(adv - 128) // 2} {STACK}> mark @TOP;')
+        lines.append(f'  pos base {b} <anchor {int(bb.bounds[2])} 0> mark @RIGHT;')
     lines.append('} mark;')
+    dg, dfw = COMB_NAME[0x307]
+    lines.append('feature mkmk {')
+    lines.append(f'  pos mark {dg} <anchor {round(dfw * k / 2)} {STACK}> mark @TOP;')
+    lines.append('} mkmk;')
     addOpenTypeFeaturesFromString(f, '\n'.join(lines))
     f.save(path)
 

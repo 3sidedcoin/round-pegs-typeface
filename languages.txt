@@ -1,6 +1,6 @@
-Round Pegs v1.011 — language coverage (Latin script, checked with shaperglot)
+Round Pegs v1.012 — language coverage (Latin script, checked with shaperglot)
 
-FULLY COVERED (347)
+FULLY COVERED (349)
 Achinese
 Afar
 Afrikaans
@@ -70,6 +70,7 @@ Dawro
 Delaware
 Dikaka
 Dutch
+Elfdalian
 Embu
 English
 Esperanto
@@ -150,6 +151,7 @@ Latin
 Latvian
 Lele
 Ligurian
+Lithuanian
 Lojban (Latin)
 Lombard
 Lomwe

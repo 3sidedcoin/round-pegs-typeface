@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.012
+- Lithuanian and dictionary tone marks: acute, grave and tilde now attach to Ą Ę Į Ų Ė İ Ū; over Ė, İ and Ū (and i + dot above) the second mark stacks two cells higher via GPOS mark and mkmk. No new drawings. Stacked marks reach 1.25 em above the baseline (above the 1.0 em ascender); vertical metrics are unchanged, usWinAscent raised to cover them.
+
 ## 1.011
 - Added Ŋ ŋ Ŧ ŧ Ǥ ǥ Ʒ ʒ Ǯ ǯ (designer-drawn Ŋ, Ŧ, Ǥ, Ʒ; Ǯ composed) for Sami, Finnish and Norwegian coverage
 
