@@ -117,7 +117,7 @@ for cp in list(range(0xC0, 0x250)) + [0x1E80, 0x1E82, 0x1E84, 0x1EF2, 0x1EBC]:
     ch = chr(cp)
     if not ch.isupper(): continue
     d = unicodedata.normalize('NFD', ch)
-    if not (len(d) == 2 and ('A' <= d[0] <= 'Z' or d[0] == '\u00d8') and ord(d[1]) in MARKS): continue
+    if not (len(d) == 2 and ('A' <= d[0] <= 'Z' or d[0] in '\u00d8\u01b7') and ord(d[1]) in MARKS): continue
     base = cm0[ord(d[0])]
     adv_b, lsb_b = font['hmtx'][base]
     bb = BoundsPen(gs); gs[base].draw(bb)

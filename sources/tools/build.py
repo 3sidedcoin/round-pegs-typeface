@@ -15,10 +15,9 @@ from fontTools.svgLib.path import parse_path
 from pathops import Path, PathOp, op
 from PIL import Image, ImageDraw, ImageFont
 
-SRC_FONT = os.environ.get('ROUND_PEGS_BASE_OTF', 'RoundPegsBase-Regular.otf')  # earlier game-version OTF (not in this repo)
-HERE = os.path.dirname(os.path.abspath(__file__))
-SVG_DIR = os.path.join(HERE, 'svg')
-OUT = os.path.join(HERE, 'build', 'intermediate.otf')
+SRC_FONT = os.environ.get('ROUND_PEGS_BASE_OTF', 'RoundPegsBase-Regular.otf')
+SVG_DIR = '/home/claude/work/zip/pixel-typeface'
+OUT = '/home/claude/work/out/RoundPegsBase-Regular.otf'
 S = 35
 GAP = 140
 
@@ -96,7 +95,7 @@ MAP.update({
 })
 MAP.update({  # extended Latin letters; lowercase / variant code points alias the same (caps-only) glyph
     'Lslash': ('Lslash', [0x141, 0x142]), 'Oslash': ('Oslash', [0xD8, 0xF8]), 'Hbar': ('Hbar', [0x126, 0x127]),
-    'Germandbls': ('uni1E9E', [0x1E9E, 0xDF]), 'Thorn': ('Thorn', [0xDE, 0xFE]), 'Eth': ('Eth', [0xD0, 0xF0, 0x110, 0x111]),
+    'Germandbls': ('uni1E9E', [0x1E9E, 0xDF]), 'Eng': ('Eng', [0x14A, 0x14B]), 'Tbar': ('Tbar', [0x166, 0x167]), 'Gbar': ('Gbar', [0x1E4, 0x1E5]), 'Ezh': ('Ezh', [0x1B7, 0x292]), 'Thorn': ('Thorn', [0xDE, 0xFE]), 'Eth': ('Eth', [0xD0, 0xF0, 0x110, 0x111]),
     'OE': ('OE', [0x152, 0x153]), 'AE': ('AE', [0xC6, 0xE6]),
 })
 

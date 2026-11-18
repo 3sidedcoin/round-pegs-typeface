@@ -62,16 +62,22 @@
     <string>E_grave.glif</string>
     <key>Emacron</key>
     <string>E_macron.glif</string>
+    <key>Eng</key>
+    <string>E_ng.glif</string>
     <key>Eogonek</key>
     <string>E_ogonek.glif</string>
     <key>Eth</key>
     <string>E_th.glif</string>
     <key>Euro</key>
     <string>E_uro.glif</string>
+    <key>Ezh</key>
+    <string>E_zh.glif</string>
     <key>F</key>
     <string>F_.glif</string>
     <key>G</key>
     <string>G_.glif</string>
+    <key>Gbar</key>
+    <string>G_bar.glif</string>
     <key>Gbreve</key>
     <string>G_breve.glif</string>
     <key>Gcaron</key>
@@ -180,6 +186,8 @@
     <string>S_circumflex.glif</string>
     <key>T</key>
     <string>T_.glif</string>
+    <key>Tbar</key>
+    <string>T_bar.glif</string>
     <key>Tcaron</key>
     <string>T_caron.glif</string>
     <key>Thorn</key>
@@ -446,6 +454,8 @@
     <string>uni01E_8.glif</string>
     <key>uni01EA</key>
     <string>uni01E_A_.glif</string>
+    <key>uni01EE</key>
+    <string>uni01E_E_.glif</string>
     <key>uni01F4</key>
     <string>uni01F_4.glif</string>
     <key>uni01F8</key>

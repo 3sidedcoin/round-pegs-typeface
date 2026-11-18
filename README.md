@@ -13,8 +13,9 @@ Designed by Tejas at [3 Sided Coin](https://3sided.co.in). Originally made for t
 
 - Basic Latin, Latin-1 Supplement and most of Latin Extended-A and B used by European languages
 - Accented capitals composed from consistent marks, plus combining marks via OpenType `mark` positioning
-- ẞ, Æ, Œ, Ø, Ł, Ħ, Þ, Ð, and common punctuation, arrows and currency symbols
-- Not yet drawn: Vietnamese stacked-mark letters
+- ẞ, Æ, Œ, Ø, Ł, Ħ, Þ, Ð, Ŋ, Ŧ, Ǥ, Ʒ, Ǯ, and common punctuation, arrows and currency symbols
+- Covers about 350 Latin-script languages, including Finnish, Norwegian and Northern Sami
+- Not yet drawn: Vietnamese, Lithuanian stacked accents, and non-Latin scripts
 
 ## Download
 

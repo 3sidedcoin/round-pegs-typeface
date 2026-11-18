@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.011
+- Added Ŋ ŋ Ŧ ŧ Ǥ ǥ Ʒ ʒ Ǯ ǯ (designer-drawn Ŋ, Ŧ, Ǥ, Ʒ; Ǯ composed) for Sami, Finnish and Norwegian coverage
+
 ## 1.010
 - Name table: added description (nameID 10) noting origin in the game Shade, Shade, Hide!!!; designer and vendor URL https://3sided.co.in
 - README, description and article now state the origin
