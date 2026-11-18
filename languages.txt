@@ -1,0 +1,368 @@
+Round Pegs v1.011 — language coverage (Latin script, checked with shaperglot)
+
+FULLY COVERED (347)
+Achinese
+Afar
+Afrikaans
+Aguaruna
+Ahtna
+Ainu (Latin)
+Alago
+Albanian
+Alekano
+Aleut
+Amahuaca
+Amarakaeri
+Amis
+Anaang
+Ao Naga
+Arabic, Chadian Spoken
+Aragonese
+Aromanian
+Ashéninka Perené
+Asu
+Awak
+Aymara
+Balinese
+Banda, West Central
+Bangwinji
+Banjar
+Bapuku
+Bari
+Basque
+Batak Toba
+Bedawiyet
+Bemba
+Bena
+Bench
+Benga
+Bikol
+Bilen
+Bislama
+Bokobaru
+Bosnian
+Breton
+Candoshi-Shapra
+Cashibo-Cacataibo
+Cashinahua
+Catalan
+Cebuano
+Chachi
+Chamorro
+Chavacano, Philippines (Latin)
+Cheyenne
+Chiduruma
+Chiga
+Chimborazo Highland Quichua
+Chinantec, Ojitlán
+Chokwe
+Chuukese
+Colognian
+Comorian, Ngazidja
+Cornish
+Corsican
+Crioulo, Upper Guinea
+Croatian
+Czech
+C’Lela
+Danish
+Dawro
+Delaware
+Dikaka
+Dutch
+Embu
+English
+Esperanto
+Estonian
+Faroese
+Fijian
+Filipino
+Finnish
+French
+Friulian
+Fuliiru
+Gagauz
+Gamo
+Ganda
+Garifuna
+German
+Gheg Albanian
+Gilbertese
+Gofa
+Gourmanchéma
+Guadeloupean Creole French, Martinique (Latin)
+Gusii
+Gwichʼin
+Gyele
+Hadiyya
+Haitian Creole
+Hani
+Hawaiian
+Hiligaynon
+Hmong
+Hmong, Northern Qiandong
+Hmong, Southern Qiandong
+Hopi
+Huastec, San Luís Potosí
+Hungarian
+Icelandic
+Iloko
+Inari Sami
+Indonesian
+Innu
+Interlingua
+Iraqw
+Italian
+Izere
+Jamaican Creole English
+Javanese
+Jola-Fonyi
+Kabuverdianu
+Kalanga
+Kalenjin
+Kamba
+Kaonde
+Kaqchikel, Central
+Karelian
+Kashubian
+Khasi
+Kikuyu
+Kimbundu
+Kinyarwanda
+Kirmanjki
+Kituba
+Klingon (Latin)
+Kombe
+Kongo
+Konjo
+Kuanyama
+Kunama
+Kuria
+Kutu
+Kwere
+Kʼicheʼ
+Ladin
+Ladino (Latin)
+Lamba
+Lango, Uganda
+Latgalian
+Latin
+Latvian
+Lele
+Ligurian
+Lojban (Latin)
+Lombard
+Lomwe
+Low German
+Lower Sorbian
+Lozi
+Luba-Lulua
+Luguru
+Lule Sami
+Lunda
+Luvale
+Luwo
+Luxembourgish
+Luyia
+Machame
+Makhuwa
+Makhuwa-Meetto
+Makonde
+Malay (Latin)
+Maltese
+Mambila, Nigeria
+Mandinka
+Mandjak
+Mankanya
+Manx
+Manyika
+Maori
+Mapuche
+Masaaba
+Matsés (Latin)
+Mazatec, Ixcatlán
+Meru
+Minangkabau
+Mirandese
+Mixe, Totontepec
+Mohawk
+Montenegrin (Latin)
+Morisyen
+Muscogee
+Mwani
+Mískito
+Nahuatl, Central
+Nara
+Ndamba
+Ndau
+Ndonga
+Neapolitan
+Ngindo
+Ngulu
+Niuean
+Nomatsiguenga
+North Ndebele
+Northern Sami
+Northern Sotho
+Norwegian
+Norwegian Bokmål
+Norwegian Nynorsk
+Novial
+Nyanja
+Nyankole
+Nyasa Tonga
+Nyemba
+Nyoro
+Occitan
+Ogbah
+Okiek
+Oromo
+Oroqen
+Otuho
+Palauan
+Pampanga
+Papiamento
+Picard
+Piedmontese
+Pijin
+Pintupi-Luritja
+Pogolo
+Pohnpeian
+Polish
+Pontic (Latin)
+Portuguese
+Purepecha
+Páez
+Pökoot
+Quechua
+Qʼeqchiʼ
+Rarotongan
+Rendille
+Rinconada Bikol
+Romanian
+Romansh
+Rombo
+Ronga
+Rundi
+Rwa
+Réunion Creole French
+Saho
+Samburu
+Samoan
+Sandawe
+Sango
+Sangu
+Sapiny
+Sardinian
+Sassarese Sardinian
+Scots
+Secoya
+Sena
+Serbian (Latin)
+Seri
+Seselwa Creole French
+Shambala
+Shilluk
+Shipibo-Conibo
+Shona
+Shuar, Ecuador (Latin)
+Sidamo
+Siksika
+Silesian
+Slovak
+Slovenian
+Soga
+Somali
+South Ndebele
+Southern Sami
+Southern Sotho
+Spanish
+Sranan Tongo
+Suba
+Sukuma
+Sundanese
+Swahili
+Swahili, Congo
+Swati
+Swedish
+Swiss German
+Sãotomense
+Tahitian
+Taita
+Takwane
+Tedim Chin
+Tetum
+Tetun Dili
+Tiv
+Tok Pisin
+Tokelau
+Tonga
+Tongan
+Tooro
+Totonac, Papantla
+Tsonga
+Tsuvadi
+Tswana
+Tula
+Tumbuka
+Turkish
+Turkmen (Latin)
+Tuvalu
+Tzeltal, Oxchuc
+Tzotzil, Chamula
+Uab Meto
+Umbundu
+Upper Sorbian
+Uyghur (Latin)
+Uzbek
+Venetian
+Veps
+Vidunda
+Volapük
+Vunjo
+Võro
+Wallisian
+Walloon
+Walser
+Waorani
+Waray
+Warlpiri
+Wayuu
+Welsh
+West Albay Bikol
+Western Frisian
+Wolaytta (Latin)
+Wolof
+Xavánte
+Xhosa
+Yaneshaʼ
+Yao
+Yapese
+Yasa
+Yucateco
+Zaghawa
+Zande
+Zayse
+Zaza
+Zigula
+Zulu
+Zuni
+Záparo
+
+COVERED EXCEPT A FEW AUXILIARY LETTERS (16)
+Acoli
+Galician
+Gawwada
+Hanga
+Harari
+Irish
+Kalaallisut
+Kurdish (Latin)
+Lakota
+Luo
+Malagasy
+Nupe-Nupe-Tako
+Punu
+Scottish Gaelic
+Tsamai
+Wendat
