@@ -7,7 +7,7 @@ fillets where cells join diagonally. It is drawn on a grid of whole and half cel
 so it stays crisp at 16px multiples. It is a capitals-only design: lowercase letters
 map to the same shapes.
 
-Designed by Tejas at [3 Sided Coin](https://3sided.co.in). Formerly "Shade Pixel".
+Designed by Tejas at [3 Sided Coin](https://3sided.co.in). Originally made for the game *Shade, Shade, Hide!!!*, then extended and released as a free, open typeface.
 
 ## Coverage
 

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.010
+- Name table: added description (nameID 10) noting origin in the game Shade, Shade, Hide!!!; designer and vendor URL https://3sided.co.in
+- README, description and article now state the origin
+
 ## 1.009
 - Renamed the family from Edge Case to Round Pegs
 
@@ -28,4 +32,4 @@
 - New ẞ: open middle
 
 ## 1.001
-- Renamed Shade Pixel to Round Pegs; added accented Latin, extra letters, marks
+- Renamed to Round Pegs; added accented Latin, extra letters, marks

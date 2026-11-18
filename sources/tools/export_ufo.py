@@ -16,6 +16,10 @@ i.capHeight = 640; i.xHeight = 640
 i.versionMajor = 1; i.versionMinor = int(round((f['head'].fontRevision % 1) * 1000))
 i.copyright = f['name'].getDebugName(0)
 i.openTypeNameDesigner = 'Tejas'
+i.openTypeNameDescription = f['name'].getDebugName(10)
+i.openTypeNameDesignerURL = 'https://3sided.co.in'
+i.openTypeNameManufacturer = '3 Sided Coin'
+i.openTypeNameManufacturerURL = 'https://3sided.co.in'
 i.openTypeNameLicense = f['name'].getDebugName(13)
 i.openTypeNameLicenseURL = 'https://openfontlicense.org'
 i.openTypeOS2VendorID = '3SDC'

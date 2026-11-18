@@ -32,12 +32,20 @@
     <integer>-384</integer>
     <key>openTypeHheaLineGap</key>
     <integer>0</integer>
+    <key>openTypeNameDescription</key>
+    <string>A pixel typeface of rounded cells, originally made for the game Shade, Shade, Hide!!!</string>
     <key>openTypeNameDesigner</key>
     <string>Tejas</string>
+    <key>openTypeNameDesignerURL</key>
+    <string>https://3sided.co.in</string>
     <key>openTypeNameLicense</key>
     <string>This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org</string>
     <key>openTypeNameLicenseURL</key>
     <string>https://openfontlicense.org</string>
+    <key>openTypeNameManufacturer</key>
+    <string>3 Sided Coin</string>
+    <key>openTypeNameManufacturerURL</key>
+    <string>https://3sided.co.in</string>
     <key>openTypeOS2Selection</key>
     <array>
       <integer>7</integer>
@@ -69,7 +77,7 @@
     <key>versionMajor</key>
     <integer>1</integer>
     <key>versionMinor</key>
-    <integer>9</integer>
+    <integer>10</integer>
     <key>xHeight</key>
     <integer>640</integer>
   </dict>

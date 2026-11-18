@@ -1,4 +1,4 @@
-"""Build an extended Shade Pixel OTF from the designer's SVG glyphs.
+"""Build an extended OTF from the designer's SVG glyphs.
 
 Scale: 1 SVG unit = 35 font units (1 pixel cell = 4 SVG units = 140 font units).
 Origin: bottom-left of each SVG canvas sits on the baseline / left origin.
@@ -15,7 +15,7 @@ from fontTools.svgLib.path import parse_path
 from pathops import Path, PathOp, op
 from PIL import Image, ImageDraw, ImageFont
 
-SRC_FONT = os.environ.get('SHADE_PIXEL_BASE_OTF', 'ShadePixel-Regular.otf')  # original Shade Pixel OTF (not in this repo)
+SRC_FONT = os.environ.get('ROUND_PEGS_BASE_OTF', 'RoundPegsBase-Regular.otf')  # earlier game-version OTF (not in this repo)
 HERE = os.path.dirname(os.path.abspath(__file__))
 SVG_DIR = os.path.join(HERE, 'svg')
 OUT = os.path.join(HERE, 'build', 'intermediate.otf')
@@ -251,7 +251,7 @@ def main():
         if rec.nameID == 5:
             rec.string = 'Version 2.200'
         elif rec.nameID == 3:
-            rec.string = '2.200;ShadePixel-Regular'
+            rec.string = '2.200;RoundPegsBase-Regular'
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     font.save(OUT)
     for r in report:

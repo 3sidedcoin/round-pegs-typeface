@@ -13,15 +13,15 @@ from fontTools.pens.boundsPen import BoundsPen
 from fontTools.pens.roundingPen import RoundingPen
 from fontTools.agl import UV2AGL
 import unicodedata
-HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
+sys.path.insert(0, '/home/claude/work')
 import build as B
 
-SRC = os.path.join(HERE, 'build', 'intermediate.otf')
+SRC = '/home/claude/work/out/RoundPegsBase-Regular.otf'
 FAMILY = sys.argv[1]
 VERSION = float(sys.argv[2]) if len(sys.argv) > 2 else 1.0
 REPO = sys.argv[3] if len(sys.argv) > 3 else 'https://github.com/3sidedcoin/' + FAMILY.lower().replace(' ', '-')
 PS = FAMILY.replace(' ', '') + '-Regular'
-OUTDIR = os.path.join(HERE, '..', 'build-out', FAMILY.replace(' ', ''))
+OUTDIR = '/home/claude/work/release/' + FAMILY.replace(' ', '')
 MIN_SEG = 8          # units; the grid cell is 140, so nothing legitimate is this short
 YEAR = 2026
 
@@ -225,7 +225,7 @@ names = {
     4: f'{FAMILY} Regular',
     5: f'Version {ver}',
     6: PS,
-    8: '3 Sided Coin', 9: 'Tejas', 11: 'https://3sided.co.in', 12: 'https://3sided.co.in',
+    8: '3 Sided Coin', 9: 'Tejas', 10: 'A pixel typeface of rounded cells, originally made for the game Shade, Shade, Hide!!!', 11: 'https://3sided.co.in', 12: 'https://3sided.co.in',
     13: 'This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org',
     14: 'https://openfontlicense.org',
 }
