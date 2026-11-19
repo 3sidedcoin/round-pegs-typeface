@@ -85,6 +85,7 @@ if top.charset is not order:
 font.setGlyphOrder(order)
 
 # --- no-break space ------------------------------------------------------------------------------
+font['hmtx'].metrics['space'] = (3 * 140, 0)   # word space: 3 cells (was 4); 1-cell side bearing + 3 + 0 = 4 cells between words
 adv = font['hmtx']['space'][0]
 if 'nbspace' not in order:
     pen = T2CharStringPen(adv, None)
@@ -311,6 +312,9 @@ def add_mark_gpos(path):
     lines.append('feature mkmk {')
     lines.append(f'  pos mark {dg} <anchor {round(dfw * k / 2)} {STACK}> mark @TOP;')
     lines.append('} mkmk;')
+    _kp = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'kern.fea')
+    if os.path.exists(_kp):
+        lines.append(open(_kp).read())
     addOpenTypeFeaturesFromString(f, '\n'.join(lines))
     f.save(path)
 

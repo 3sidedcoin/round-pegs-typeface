@@ -112,6 +112,38 @@
       <string>Oslash</string>
       <string>Hbar</string>
       <string>uni1E9E</string>
+      <string>plusminus</string>
+      <string>mu</string>
+      <string>logicalnot</string>
+      <string>dagger</string>
+      <string>daggerdbl</string>
+      <string>florin</string>
+      <string>perthousand</string>
+      <string>zerosuperior</string>
+      <string>zeroinferior</string>
+      <string>oneinferior</string>
+      <string>twoinferior</string>
+      <string>threeinferior</string>
+      <string>foursuperior</string>
+      <string>fourinferior</string>
+      <string>fivesuperior</string>
+      <string>fiveinferior</string>
+      <string>sixsuperior</string>
+      <string>sixinferior</string>
+      <string>sevensuperior</string>
+      <string>seveninferior</string>
+      <string>eightsuperior</string>
+      <string>eightinferior</string>
+      <string>ninesuperior</string>
+      <string>nineinferior</string>
+      <string>currency</string>
+      <string>brokenbar</string>
+      <string>onehalf</string>
+      <string>onequarter</string>
+      <string>threequarters</string>
+      <string>onesuperior</string>
+      <string>twosuperior</string>
+      <string>threesuperior</string>
       <string>Eng</string>
       <string>Tbar</string>
       <string>Gbar</string>

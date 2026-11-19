@@ -1,4 +1,4 @@
-"""Build an extended OTF from the designer's SVG glyphs.
+"""Build an extended Shade Pixel OTF from the designer's SVG glyphs.
 
 Scale: 1 SVG unit = 35 font units (1 pixel cell = 4 SVG units = 140 font units).
 Origin: bottom-left of each SVG canvas sits on the baseline / left origin.
@@ -15,9 +15,9 @@ from fontTools.svgLib.path import parse_path
 from pathops import Path, PathOp, op
 from PIL import Image, ImageDraw, ImageFont
 
-SRC_FONT = os.environ.get('ROUND_PEGS_BASE_OTF', 'RoundPegsBase-Regular.otf')
+SRC_FONT = '/mnt/user-data/uploads/260051fe-ShadePixel-Regular.otf'
 SVG_DIR = '/home/claude/work/zip/pixel-typeface'
-OUT = '/home/claude/work/out/RoundPegsBase-Regular.otf'
+OUT = '/home/claude/work/out/ShadePixel-Regular.otf'
 S = 35
 GAP = 140
 
@@ -95,7 +95,7 @@ MAP.update({
 })
 MAP.update({  # extended Latin letters; lowercase / variant code points alias the same (caps-only) glyph
     'Lslash': ('Lslash', [0x141, 0x142]), 'Oslash': ('Oslash', [0xD8, 0xF8]), 'Hbar': ('Hbar', [0x126, 0x127]),
-    'Germandbls': ('uni1E9E', [0x1E9E, 0xDF]), 'Eng': ('Eng', [0x14A, 0x14B]), 'Tbar': ('Tbar', [0x166, 0x167]), 'Gbar': ('Gbar', [0x1E4, 0x1E5]), 'Ezh': ('Ezh', [0x1B7, 0x292]), 'Thorn': ('Thorn', [0xDE, 0xFE]), 'Eth': ('Eth', [0xD0, 0xF0, 0x110, 0x111]),
+    'Germandbls': ('uni1E9E', [0x1E9E, 0xDF]), 'plusminus': ('plusminus', [0xB1]), 'mu': ('mu', [0xB5]), 'logicalnot': ('logicalnot', [0xAC]), 'dagger': ('dagger', [0x2020]), 'daggerdbl': ('daggerdbl', [0x2021]), 'florin': ('florin', [0x192]), 'perthousand': ('perthousand', [0x2030]), 'zerosuperior': ('zerosuperior', [0x2070]), 'zeroinferior': ('zeroinferior', [0x2080]), 'oneinferior': ('oneinferior', [0x2081]), 'twoinferior': ('twoinferior', [0x2082]), 'threeinferior': ('threeinferior', [0x2083]), 'foursuperior': ('foursuperior', [0x2074]), 'fourinferior': ('fourinferior', [0x2084]), 'fivesuperior': ('fivesuperior', [0x2075]), 'fiveinferior': ('fiveinferior', [0x2085]), 'sixsuperior': ('sixsuperior', [0x2076]), 'sixinferior': ('sixinferior', [0x2086]), 'sevensuperior': ('sevensuperior', [0x2077]), 'seveninferior': ('seveninferior', [0x2087]), 'eightsuperior': ('eightsuperior', [0x2078]), 'eightinferior': ('eightinferior', [0x2088]), 'ninesuperior': ('ninesuperior', [0x2079]), 'nineinferior': ('nineinferior', [0x2089]),  'currency': ('currency', [0xA4]), 'brokenbar': ('brokenbar', [0xA6]), 'onehalf': ('onehalf', [0xBD]), 'onequarter': ('onequarter', [0xBC]), 'threequarters': ('threequarters', [0xBE]), 'onesuperior': ('onesuperior', [0xB9]), 'twosuperior': ('twosuperior', [0xB2]), 'threesuperior': ('threesuperior', [0xB3]), 'Eng': ('Eng', [0x14A, 0x14B]), 'Tbar': ('Tbar', [0x166, 0x167]), 'Gbar': ('Gbar', [0x1E4, 0x1E5]), 'Ezh': ('Ezh', [0x1B7, 0x292]), 'Thorn': ('Thorn', [0xDE, 0xFE]), 'Eth': ('Eth', [0xD0, 0xF0, 0x110, 0x111]),
     'OE': ('OE', [0x152, 0x153]), 'AE': ('AE', [0xC6, 0xE6]),
 })
 
@@ -106,8 +106,8 @@ def rect_d(x, y, w, h, r):
             f'H{x+r}A{r} {r} 0 0 1 {x} {y+h-r}V{y+r}A{r} {r} 0 0 1 {x+r} {y}Z')
 
 
-BASE_OVERRIDE = {'ordfeminine': 24, 'ordmasculine': 24, 'registered': 24, 'copyright': 24}  # ink bottom sits on baseline in these 32-high frames
-CROP = {'ordfeminine': (4, 20), 'ordmasculine': (4, 20), 'registered': (4, 24), 'copyright': (4, 24), 'degree': (12, 24), 'guillemet-left': (4, 20), 'guillemet-right': (4, 20), 'pilcrow': (4, 20), 'section': (4, 20), 'guilsingle-left': (12, 20), 'guilsingle-right': (12, 20)}  # frames with side margin: crop to ink columns
+BASE_OVERRIDE = {'mu': 20, 'zerosuperior': 32, 'foursuperior': 32, 'fivesuperior': 32, 'sixsuperior': 32, 'sevensuperior': 32, 'eightsuperior': 32, 'ninesuperior': 32, 'zeroinferior': 8, 'oneinferior': 8, 'twoinferior': 8, 'threeinferior': 8, 'fourinferior': 8, 'fiveinferior': 8, 'sixinferior': 8, 'seveninferior': 8, 'eightinferior': 8, 'nineinferior': 8, 'currency': 30, 'ordfeminine': 24, 'ordmasculine': 24, 'registered': 24, 'copyright': 24}  # ink bottom sits on baseline in these 32-high frames
+CROP = {'zerosuperior': (4, 16), 'zeroinferior': (4, 16), 'oneinferior': (12, 24), 'twoinferior': (12, 24), 'threeinferior': (12, 24), 'foursuperior': (4, 16), 'fourinferior': (4, 16), 'fivesuperior': (4, 16), 'fiveinferior': (4, 16), 'sixsuperior': (4, 16), 'sixinferior': (4, 16), 'sevensuperior': (4, 16), 'seveninferior': (4, 16), 'eightsuperior': (4, 16), 'eightinferior': (4, 16), 'ninesuperior': (4, 16), 'nineinferior': (4, 16), 'onesuperior': (12, 24), 'twosuperior': (12, 24), 'threesuperior': (12, 24), 'ordfeminine': (4, 20), 'ordmasculine': (4, 20), 'registered': (4, 24), 'copyright': (4, 24), 'degree': (12, 24), 'guillemet-left': (4, 20), 'guillemet-right': (4, 20), 'pilcrow': (4, 20), 'section': (4, 20), 'guilsingle-left': (12, 20), 'guilsingle-right': (12, 20)}  # frames with side margin: crop to ink columns
 
 
 def load_svg(stem):
@@ -250,7 +250,7 @@ def main():
         if rec.nameID == 5:
             rec.string = 'Version 2.200'
         elif rec.nameID == 3:
-            rec.string = '2.200;RoundPegsBase-Regular'
+            rec.string = '2.200;ShadePixel-Regular'
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     font.save(OUT)
     for r in report:

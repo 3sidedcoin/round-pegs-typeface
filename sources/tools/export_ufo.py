@@ -76,6 +76,10 @@ mk = [g for g in order if gd.get(g) == 3]; bs = [g for g in order if gd.get(g) =
 fea.append('table GDEF {')
 fea.append('  GlyphClassDef [' + ' '.join(bs) + '], , [' + ' '.join(mk) + '], ;')
 fea.append('} GDEF;')
+import os
+kp = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'kern.fea')
+if os.path.exists(kp):
+    fea.append(open(kp).read())
 u.features.text = '\n'.join(fea) + '\n'
 u.save(DST, overwrite=True)
 print(len(order), 'glyphs;', len(mk), 'marks;', len(bases), 'bases')
