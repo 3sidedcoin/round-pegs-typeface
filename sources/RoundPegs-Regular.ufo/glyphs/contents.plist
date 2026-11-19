@@ -252,14 +252,26 @@
     <string>acutecomb.glif</string>
     <key>ampersand</key>
     <string>ampersand.glif</string>
+    <key>arrowboth</key>
+    <string>arrowboth.glif</string>
     <key>arrowdown</key>
     <string>arrowdown.glif</string>
+    <key>arrowdownleft</key>
+    <string>arrowdownleft.glif</string>
+    <key>arrowdownright</key>
+    <string>arrowdownright.glif</string>
     <key>arrowleft</key>
     <string>arrowleft.glif</string>
     <key>arrowright</key>
     <string>arrowright.glif</string>
     <key>arrowup</key>
     <string>arrowup.glif</string>
+    <key>arrowupdn</key>
+    <string>arrowupdn.glif</string>
+    <key>arrowupleft</key>
+    <string>arrowupleft.glif</string>
+    <key>arrowupright</key>
+    <string>arrowupright.glif</string>
     <key>asciicircum</key>
     <string>asciicircum.glif</string>
     <key>asciitilde</key>
@@ -306,6 +318,8 @@
     <string>dagger.glif</string>
     <key>daggerdbl</key>
     <string>daggerdbl.glif</string>
+    <key>dblverticalbar</key>
+    <string>dblverticalbar.glif</string>
     <key>degree</key>
     <string>degree.glif</string>
     <key>dieresis</key>
@@ -346,6 +360,8 @@
     <string>fourinferior.glif</string>
     <key>foursuperior</key>
     <string>foursuperior.glif</string>
+    <key>fraction</key>
+    <string>fraction.glif</string>
     <key>grave</key>
     <string>grave.glif</string>
     <key>gravecomb</key>
@@ -372,6 +388,8 @@
     <string>macron.glif</string>
     <key>minus</key>
     <string>minus.glif</string>
+    <key>minute</key>
+    <string>minute.glif</string>
     <key>mu</key>
     <string>mu.glif</string>
     <key>multiply</key>
@@ -386,6 +404,8 @@
     <string>ninesuperior.glif</string>
     <key>numbersign</key>
     <string>numbersign.glif</string>
+    <key>numero</key>
+    <string>numero.glif</string>
     <key>ogonek</key>
     <string>ogonek.glif</string>
     <key>one</key>
@@ -398,6 +418,8 @@
     <string>onequarter.glif</string>
     <key>onesuperior</key>
     <string>onesuperior.glif</string>
+    <key>onethird</key>
+    <string>onethird.glif</string>
     <key>ordfeminine</key>
     <string>ordfeminine.glif</string>
     <key>ordmasculine</key>
@@ -444,6 +466,8 @@
     <string>ring.glif</string>
     <key>rupee</key>
     <string>rupee.glif</string>
+    <key>second</key>
+    <string>second.glif</string>
     <key>section</key>
     <string>section.glif</string>
     <key>semicolon</key>
@@ -486,6 +510,8 @@
     <string>twoinferior.glif</string>
     <key>twosuperior</key>
     <string>twosuperior.glif</string>
+    <key>twothirds</key>
+    <string>twothirds.glif</string>
     <key>u2026</key>
     <string>u2026.glif</string>
     <key>underscore</key>

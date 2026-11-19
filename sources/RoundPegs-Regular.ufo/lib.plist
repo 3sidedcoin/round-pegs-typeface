@@ -97,6 +97,19 @@
       <string>arrowup</string>
       <string>arrowright</string>
       <string>arrowdown</string>
+      <string>arrowupleft</string>
+      <string>arrowupright</string>
+      <string>arrowdownright</string>
+      <string>arrowdownleft</string>
+      <string>arrowboth</string>
+      <string>arrowupdn</string>
+      <string>onethird</string>
+      <string>twothirds</string>
+      <string>fraction</string>
+      <string>dblverticalbar</string>
+      <string>numero</string>
+      <string>minute</string>
+      <string>second</string>
       <string>copyright</string>
       <string>registered</string>
       <string>ordfeminine</string>
