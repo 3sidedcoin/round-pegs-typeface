@@ -1,6 +1,7 @@
 # Changelog
 
 ## 1.013
+- Added ≠ ≈ ∫ ∞ ⟨ ⟩ and the geometric shapes ■ □ ▲ ▴ ▶ ▸ ▼ ▾ ◀ ◂ ◆ ◇ ◊ (19 glyphs). ≠ and ≈ were re-fitted to the cell grid; ▶ ▸ ▾ ◀ ◂ are rotations and flips of the drawn triangles. Hollow triangles are intentionally not included.
 - Added ′ ″ prime and double prime (U+2032-2033), as separate glyphs sharing the straight-quote outlines; they can be redrawn slanted later without other changes
 - Added ↔ ↕ (U+2194-2195), ⅓ ⅔ (U+2153-2154), ⁄ fraction slash (U+2044), ‖ double vertical line (U+2016) and № (U+2116), all designer-drawn; ↕ and ⁄ ‖ run from 1 cell below the baseline to 6 above
 - Added ↖ ↗ ↘ ↙ (U+2196-2199), designer-drawn diagonal arrows, 4 cells wide and 5 tall

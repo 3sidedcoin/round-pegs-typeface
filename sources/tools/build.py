@@ -89,6 +89,25 @@ MAP.update({
     'fraction-slash': ('fraction', [0x2044]),
     'pipe-double': ('dblverticalbar', [0x2016]),
     'numero': ('numero', [0x2116]),
+    'not-equal': ('notequal', [0x2260]),
+    'approx-equal': ('approxequal', [0x2248]),
+    'integral': ('integral', [0x222B]),
+    'infinity': ('infinity', [0x221E]),
+    'angle-open': ('uni27E8', [0x27E8]),
+    'angle-close': ('uni27E9', [0x27E9]),
+    'square-solid': ('filledbox', [0x25A0]),
+    'square-border': ('H22073', [0x25A1]),
+    'tri-up': ('triagup', [0x25B2]),
+    'tri-up-small': ('uni25B4', [0x25B4]),
+    'tri-right': ('uni25B6', [0x25B6]),
+    'tri-right-small': ('uni25B8', [0x25B8]),
+    'tri-down': ('triagdn', [0x25BC]),
+    'tri-down-small': ('uni25BE', [0x25BE]),
+    'tri-left': ('uni25C0', [0x25C0]),
+    'tri-left-small': ('uni25C2', [0x25C2]),
+    'diamond': ('uni25C6', [0x25C6]),
+    'diamond-empty': ('uni25C7', [0x25C7]),
+    'lozenge': ('lozenge', [0x25CA]),
     'prime': ('minute', [0x2032]),
     'double-prime': ('second', [0x2033]),
 })
@@ -120,7 +139,7 @@ def rect_d(x, y, w, h, r):
 
 
 BASE_OVERRIDE = {'mu': 20, 'zerosuperior': 32, 'foursuperior': 32, 'fivesuperior': 32, 'sixsuperior': 32, 'sevensuperior': 32, 'eightsuperior': 32, 'ninesuperior': 32, 'zeroinferior': 8, 'oneinferior': 8, 'twoinferior': 8, 'threeinferior': 8, 'fourinferior': 8, 'fiveinferior': 8, 'sixinferior': 8, 'seveninferior': 8, 'eightinferior': 8, 'nineinferior': 8, 'currency': 30, 'ordfeminine': 24, 'ordmasculine': 24, 'registered': 24, 'copyright': 24}  # ink bottom sits on baseline in these 32-high frames
-CROP = {'zerosuperior': (4, 16), 'zeroinferior': (4, 16), 'oneinferior': (12, 24), 'twoinferior': (12, 24), 'threeinferior': (12, 24), 'foursuperior': (4, 16), 'fourinferior': (4, 16), 'fivesuperior': (4, 16), 'fiveinferior': (4, 16), 'sixsuperior': (4, 16), 'sixinferior': (4, 16), 'sevensuperior': (4, 16), 'seveninferior': (4, 16), 'eightsuperior': (4, 16), 'eightinferior': (4, 16), 'ninesuperior': (4, 16), 'nineinferior': (4, 16), 'onesuperior': (12, 24), 'twosuperior': (12, 24), 'threesuperior': (12, 24), 'ordfeminine': (4, 20), 'ordmasculine': (4, 20), 'registered': (4, 24), 'copyright': (4, 24), 'degree': (12, 24), 'guillemet-left': (4, 20), 'guillemet-right': (4, 20), 'pilcrow': (4, 20), 'section': (4, 20), 'guilsingle-left': (12, 20), 'guilsingle-right': (12, 20), 'arrow-updown': (4, 24)}  # frames with side margin: crop to ink columns
+CROP = {'zerosuperior': (4, 16), 'zeroinferior': (4, 16), 'oneinferior': (12, 24), 'twoinferior': (12, 24), 'threeinferior': (12, 24), 'foursuperior': (4, 16), 'fourinferior': (4, 16), 'fivesuperior': (4, 16), 'fiveinferior': (4, 16), 'sixsuperior': (4, 16), 'sixinferior': (4, 16), 'sevensuperior': (4, 16), 'seveninferior': (4, 16), 'eightsuperior': (4, 16), 'eightinferior': (4, 16), 'ninesuperior': (4, 16), 'nineinferior': (4, 16), 'onesuperior': (12, 24), 'twosuperior': (12, 24), 'threesuperior': (12, 24), 'ordfeminine': (4, 20), 'ordmasculine': (4, 20), 'registered': (4, 24), 'copyright': (4, 24), 'degree': (12, 24), 'guillemet-left': (4, 20), 'guillemet-right': (4, 20), 'pilcrow': (4, 20), 'section': (4, 20), 'guilsingle-left': (12, 20), 'guilsingle-right': (12, 20), 'arrow-updown': (4, 24), 'square-solid': (4, 16), 'square-border': (4, 16), 'tri-up': (4, 16), 'tri-up-small': (4, 16), 'tri-down': (4, 16), 'tri-down-small': (4, 16), 'tri-right': (4, 16), 'tri-left': (4, 16), 'tri-right-small': (8, 16), 'tri-left-small': (4, 12), 'lozenge': (4, 16)}  # frames with side margin: crop to ink columns
 
 
 def load_svg(stem):

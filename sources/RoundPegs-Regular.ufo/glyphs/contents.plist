@@ -88,6 +88,8 @@
     <string>G_dotaccent.glif</string>
     <key>H</key>
     <string>H_.glif</string>
+    <key>H22073</key>
+    <string>H_22073.glif</string>
     <key>Hbar</key>
     <string>H_bar.glif</string>
     <key>Hcircumflex</key>
@@ -252,6 +254,8 @@
     <string>acutecomb.glif</string>
     <key>ampersand</key>
     <string>ampersand.glif</string>
+    <key>approxequal</key>
+    <string>approxequal.glif</string>
     <key>arrowboth</key>
     <string>arrowboth.glif</string>
     <key>arrowdown</key>
@@ -346,6 +350,8 @@
     <string>exclam.glif</string>
     <key>exclamdown</key>
     <string>exclamdown.glif</string>
+    <key>filledbox</key>
+    <string>filledbox.glif</string>
     <key>five</key>
     <string>five.glif</string>
     <key>fiveinferior</key>
@@ -380,10 +386,16 @@
     <string>hungarumlaut.glif</string>
     <key>hyphen</key>
     <string>hyphen.glif</string>
+    <key>infinity</key>
+    <string>infinity.glif</string>
+    <key>integral</key>
+    <string>integral.glif</string>
     <key>less</key>
     <string>less.glif</string>
     <key>logicalnot</key>
     <string>logicalnot.glif</string>
+    <key>lozenge</key>
+    <string>lozenge.glif</string>
     <key>macron</key>
     <string>macron.glif</string>
     <key>minus</key>
@@ -402,6 +414,8 @@
     <string>nineinferior.glif</string>
     <key>ninesuperior</key>
     <string>ninesuperior.glif</string>
+    <key>notequal</key>
+    <string>notequal.glif</string>
     <key>numbersign</key>
     <string>numbersign.glif</string>
     <key>numero</key>
@@ -504,6 +518,10 @@
     <string>tildecomb.glif</string>
     <key>trademark</key>
     <string>trademark.glif</string>
+    <key>triagdn</key>
+    <string>triagdn.glif</string>
+    <key>triagup</key>
+    <string>triagup.glif</string>
     <key>two</key>
     <string>two.glif</string>
     <key>twoinferior</key>
@@ -586,8 +604,28 @@
     <string>uni1E_9E_.glif</string>
     <key>uni1EBC</key>
     <string>uni1E_B_C_.glif</string>
+    <key>uni25B4</key>
+    <string>uni25B_4.glif</string>
+    <key>uni25B6</key>
+    <string>uni25B_6.glif</string>
+    <key>uni25B8</key>
+    <string>uni25B_8.glif</string>
+    <key>uni25BE</key>
+    <string>uni25B_E_.glif</string>
+    <key>uni25C0</key>
+    <string>uni25C_0.glif</string>
+    <key>uni25C2</key>
+    <string>uni25C_2.glif</string>
+    <key>uni25C6</key>
+    <string>uni25C_6.glif</string>
+    <key>uni25C7</key>
+    <string>uni25C_7.glif</string>
     <key>uni25CC</key>
     <string>uni25C_C_.glif</string>
+    <key>uni27E8</key>
+    <string>uni27E_8.glif</string>
+    <key>uni27E9</key>
+    <string>uni27E_9.glif</string>
     <key>yen</key>
     <string>yen.glif</string>
     <key>zero</key>
