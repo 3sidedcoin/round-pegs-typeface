@@ -1,7 +1,10 @@
 # Changelog
 
-## 1.016
-- The cedilla now hangs from the letter: the mark moved up 1 cell so it joins the base instead of floating 1 cell below it. Applies to Ç Ş Ģ Ķ Ļ Ņ Ŗ Ţ and the spacing and combining cedilla (the comma-below on Ș Ț is unchanged). Ç and the rest descend 1 cell instead of 2. Version bumped so installed copies are replaced.
+## 1.017
+- Added ∂ ∏ ∑ (U+2202, U+220F, U+2211) and π (U+03C0), designer-drawn; ∂ ∏ ∑ run from 1 cell below the baseline to 6 above and are 5 cells wide, π is cap height
+- Added ✓ check mark (U+2713), designer-drawn, 5 cells wide and 4 tall
+- The cedilla now hangs from the letter: the mark moved up 1 cell so it joins the base instead of floating 1 cell below it. Applies to Ç Ş Ģ Ķ Ļ Ņ Ŗ Ţ and the spacing and combining cedilla (the comma-below on Ș Ț is unchanged). Ç and the rest descend 1 cell instead of 2.
+- Version bumped so installed copies are replaced
 
 ## 1.015
 - Redrew the degree sign ° as a simplified round ring (4 cells around a hole, the same construction as º); ℃ and ℉ pick it up
