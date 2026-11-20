@@ -1,10 +1,14 @@
 # Changelog
 
-## 1.013
+## 1.014
+- Version bumped so installing the new files replaces 1.013 in font managers and design tools
+- Simplified the en dash and em dash to plain bars (no decorative pinch); en dash is 3 cells wide, em dash 5
 - Added ≠ ≈ ∫ ∞ ⟨ ⟩ and the geometric shapes ■ □ ▲ ▴ ▶ ▸ ▼ ▾ ◀ ◂ ◆ ◇ ◊ (19 glyphs). ≠ and ≈ were re-fitted to the cell grid; ▶ ▸ ▾ ◀ ◂ are rotations and flips of the drawn triangles. Hollow triangles are intentionally not included.
 - Added ′ ″ prime and double prime (U+2032-2033), as separate glyphs sharing the straight-quote outlines; they can be redrawn slanted later without other changes
 - Added ↔ ↕ (U+2194-2195), ⅓ ⅔ (U+2153-2154), ⁄ fraction slash (U+2044), ‖ double vertical line (U+2016) and № (U+2116), all designer-drawn; ↕ and ⁄ ‖ run from 1 cell below the baseline to 6 above
 - Added ↖ ↗ ↘ ↙ (U+2196-2199), designer-drawn diagonal arrows, 4 cells wide and 5 tall
+
+## 1.013
 - Added µ ¬ † ‡ ƒ ‰ (U+00B5, U+00AC, U+2020, U+2021, U+0192, U+2030), designer-drawn: Windows-1252 is now complete
 - Added ⁰ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ (U+2070, U+2074-2079) and ₀-₉ (U+2080-2089), designer-drawn; superscripts are 3 cells wide and 4 tall, subscripts reuse the same outlines, 2 cells below the baseline to 2 above
 - Added ¦ broken bar (U+00A6) and ¤ currency sign (U+00A4); redrew %
