@@ -108,6 +108,25 @@
       <string>fraction</string>
       <string>dblverticalbar</string>
       <string>numero</string>
+      <string>notequal</string>
+      <string>approxequal</string>
+      <string>integral</string>
+      <string>infinity</string>
+      <string>uni27E8</string>
+      <string>uni27E9</string>
+      <string>filledbox</string>
+      <string>H22073</string>
+      <string>triagup</string>
+      <string>uni25B4</string>
+      <string>uni25B6</string>
+      <string>uni25B8</string>
+      <string>triagdn</string>
+      <string>uni25BE</string>
+      <string>uni25C0</string>
+      <string>uni25C2</string>
+      <string>uni25C6</string>
+      <string>uni25C7</string>
+      <string>lozenge</string>
       <string>minute</string>
       <string>second</string>
       <string>copyright</string>
