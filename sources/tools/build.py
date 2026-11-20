@@ -101,6 +101,9 @@ MAP.update({
     'omega': ('uni2126', [0x2126, 0x3A9]),
     'estimated': ('estimated', [0x212E]),
     'ell': ('uni2113', [0x2113]),
+    'delta': ('uni2206', [0x2206, 0x394]),
+    'small-square': ('H18543', [0x25AA]),
+    'circle-d': ('uni24B9', [0x24B9]),
     'infinity': ('infinity', [0x221E]),
     'angle-open': ('uni27E8', [0x27E8]),
     'angle-close': ('uni27E9', [0x27E9]),
@@ -148,7 +151,7 @@ def rect_d(x, y, w, h, r):
 
 
 BASE_OVERRIDE = {'mu': 20, 'zerosuperior': 32, 'foursuperior': 32, 'fivesuperior': 32, 'sixsuperior': 32, 'sevensuperior': 32, 'eightsuperior': 32, 'ninesuperior': 32, 'zeroinferior': 8, 'oneinferior': 8, 'twoinferior': 8, 'threeinferior': 8, 'fourinferior': 8, 'fiveinferior': 8, 'sixinferior': 8, 'seveninferior': 8, 'eightinferior': 8, 'nineinferior': 8, 'currency': 30, 'ordfeminine': 24, 'ordmasculine': 24, 'registered': 24, 'copyright': 24}  # ink bottom sits on baseline in these 32-high frames
-CROP = {'zerosuperior': (4, 16), 'zeroinferior': (4, 16), 'oneinferior': (12, 24), 'twoinferior': (12, 24), 'threeinferior': (12, 24), 'foursuperior': (4, 16), 'fourinferior': (4, 16), 'fivesuperior': (4, 16), 'fiveinferior': (4, 16), 'sixsuperior': (4, 16), 'sixinferior': (4, 16), 'sevensuperior': (4, 16), 'seveninferior': (4, 16), 'eightsuperior': (4, 16), 'eightinferior': (4, 16), 'ninesuperior': (4, 16), 'nineinferior': (4, 16), 'onesuperior': (12, 24), 'twosuperior': (12, 24), 'threesuperior': (12, 24), 'ordfeminine': (4, 20), 'ordmasculine': (4, 20), 'registered': (4, 24), 'copyright': (4, 24), 'degree': (12, 24), 'guillemet-left': (4, 20), 'guillemet-right': (4, 20), 'pilcrow': (4, 20), 'section': (4, 20), 'guilsingle-left': (12, 20), 'guilsingle-right': (12, 20), 'arrow-updown': (4, 24), 'square-solid': (4, 16), 'square-border': (4, 16), 'tri-up': (4, 16), 'tri-up-small': (4, 16), 'tri-down': (4, 16), 'tri-down-small': (4, 16), 'tri-right': (4, 16), 'tri-left': (4, 16), 'tri-right-small': (8, 16), 'tri-left-small': (4, 12), 'lozenge': (4, 16)}  # frames with side margin: crop to ink columns
+CROP = {'small-square': (6, 14), 'zerosuperior': (4, 16), 'zeroinferior': (4, 16), 'oneinferior': (12, 24), 'twoinferior': (12, 24), 'threeinferior': (12, 24), 'foursuperior': (4, 16), 'fourinferior': (4, 16), 'fivesuperior': (4, 16), 'fiveinferior': (4, 16), 'sixsuperior': (4, 16), 'sixinferior': (4, 16), 'sevensuperior': (4, 16), 'seveninferior': (4, 16), 'eightsuperior': (4, 16), 'eightinferior': (4, 16), 'ninesuperior': (4, 16), 'nineinferior': (4, 16), 'onesuperior': (12, 24), 'twosuperior': (12, 24), 'threesuperior': (12, 24), 'ordfeminine': (4, 20), 'ordmasculine': (4, 20), 'registered': (4, 24), 'copyright': (4, 24), 'degree': (12, 24), 'guillemet-left': (4, 20), 'guillemet-right': (4, 20), 'pilcrow': (4, 20), 'section': (4, 20), 'guilsingle-left': (12, 20), 'guilsingle-right': (12, 20), 'arrow-updown': (4, 24), 'square-solid': (4, 16), 'square-border': (4, 16), 'tri-up': (4, 16), 'tri-up-small': (4, 16), 'tri-down': (4, 16), 'tri-down-small': (4, 16), 'tri-right': (4, 16), 'tri-left': (4, 16), 'tri-right-small': (8, 16), 'tri-left-small': (4, 12), 'lozenge': (4, 16)}  # frames with side margin: crop to ink columns
 
 
 def load_svg(stem):

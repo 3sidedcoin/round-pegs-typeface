@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.019
+- Added ∆ (U+2206 increment, shared with the Greek capital delta U+0394), ▪ (U+25AA) and Ⓓ (U+24B9), all designer-drawn. ∆ is a 5-cell hollow triangle with the star fillets at its diagonal joins; ▪ is 2×2 cells, centred on the middle of the cap height (half-cell vertical offset); Ⓓ is a 6×7 ring from 1 cell below the baseline to 6 above, with a solid d-shaped letter inside.
+- Version bumped so installed copies are replaced
+
 ## 1.018
 - Added Ω (U+2126 ohm sign and U+03A9 Greek capital omega share one glyph), √ (U+221A), ℮ (U+212E) and ℓ (U+2113), all designer-drawn. Ω, √ and ℮ are 5 cells wide at cap height; ℓ is 4 wide and runs from 1 cell below the baseline to 6 above.
 - Version bumped so installed copies are replaced
