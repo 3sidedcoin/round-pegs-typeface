@@ -15,7 +15,7 @@ Ink width in cells, advance = ink + 1 cell of space on the right (left side bear
 - 4 cells: stem-and-arm letters (A B C D E F G H J K L P R S), the digits, and most others.
 - 5 cells: letters with a diagonal or a centre column: M N V W X Y Z, and the round O, Q, U.
 
-This is a deliberate two-class system, not an accident: the 5-cell O, Q and U keep a 3-cell flat top, which is what makes the face read as round. Narrowing them to 4 cells was previewed and rejected (it makes the rhythm slightly more even but turns the bowls into octagons, and Q needs a redraw).
+This is a deliberate two-class system, not an accident: the 5-cell O, Q and U keep a 3-cell flat top, which is what makes the face read as round. Narrowing them to 4 cells was previewed and rejected (it makes the rhythm slightly more even but turns the bowls into octagons, and Q needs a redraw). A 5-cell T was also previewed and rejected: it lightens T (ink share about 0.30 instead of 0.35) but it overwhelms its neighbours, lengthens T-heavy words by about 4 cells and needs Ŧ redrawn. I and T stay at 3 cells because a 1-cell stem only centres in an odd width.
 
 ## Spacing
 
