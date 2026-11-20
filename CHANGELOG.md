@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.018
+- Added Ω (U+2126 ohm sign and U+03A9 Greek capital omega share one glyph), √ (U+221A), ℮ (U+212E) and ℓ (U+2113), all designer-drawn. Ω, √ and ℮ are 5 cells wide at cap height; ℓ is 4 wide and runs from 1 cell below the baseline to 6 above.
+- Version bumped so installed copies are replaced
+
 ## 1.017
 - Added ∂ ∏ ∑ (U+2202, U+220F, U+2211) and π (U+03C0), designer-drawn; ∂ ∏ ∑ run from 1 cell below the baseline to 6 above and are 5 cells wide, π is cap height
 - Added ✓ check mark (U+2713), designer-drawn, 5 cells wide and 4 tall
