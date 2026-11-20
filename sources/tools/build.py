@@ -264,6 +264,14 @@ def main():
             path.draw(TransformPen(mir.getPen(), (-1, 0, 0, 1, b[0] + b[2], 0)))
             mir.simplify(fix_winding=True, clockwise=True)
             add_glyph('quoteleft', [0x2018], mir, adv, 'apostrophe (mirrored)')
+    for cp, name, letter in [(0x2103, 'uni2103', 'C'), (0x2109, 'uni2109', 'F')]:  # degree Celsius / Fahrenheit = degree sign + letter, same spacing as typing them
+        dW, dH, dshapes = load_svg('degree')
+        dpath = combine('degree', dshapes)
+        dadv = int(round(dW * S)) + GAP
+        lp = Path(); gs0[letter].draw(TransformPen(lp.getPen(), (1, 0, 0, 1, dadv, 0)))
+        comp = op(dpath, lp, PathOp.UNION)
+        comp.simplify(fix_winding=True, clockwise=True)
+        add_glyph(name, [cp], comp, dadv + hmtx[letter][0], f'{name} = degree + {letter}')
     for ch in '0123456789':  # original digits + additive stars at corner-touch junctions
         path = Path(); gs0[ch].draw(path.getPen())
         path.simplify(fix_winding=True)
