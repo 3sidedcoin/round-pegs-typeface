@@ -346,6 +346,8 @@
     <string>endash.glif</string>
     <key>equal</key>
     <string>equal.glif</string>
+    <key>estimated</key>
+    <string>estimated.glif</string>
     <key>exclam</key>
     <string>exclam.glif</string>
     <key>exclamdown</key>
@@ -480,6 +482,8 @@
     <string>quoteright.glif</string>
     <key>quotesingle</key>
     <string>quotesingle.glif</string>
+    <key>radical</key>
+    <string>radical.glif</string>
     <key>registered</key>
     <string>registered.glif</string>
     <key>ring</key>
@@ -616,6 +620,10 @@
     <string>uni2103.glif</string>
     <key>uni2109</key>
     <string>uni2109.glif</string>
+    <key>uni2113</key>
+    <string>uni2113.glif</string>
+    <key>uni2126</key>
+    <string>uni2126.glif</string>
     <key>uni25B4</key>
     <string>uni25B_4.glif</string>
     <key>uni25B6</key>
