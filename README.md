@@ -11,12 +11,16 @@ Designed by Tejas at [3 Sided Coin](https://3sided.co.in). Originally made for t
 
 ## Coverage
 
-- Basic Latin, Latin-1 Supplement and most of Latin Extended-A and B used by European languages
-- Accented capitals composed from consistent marks, plus combining marks via OpenType `mark` positioning
-- ẞ, Æ, Œ, Ø, Ł, Ħ, Þ, Ð, Ŋ, Ŧ, Ǥ, Ʒ, Ǯ, and common punctuation, arrows and currency symbols
-- Covers about 350 Latin-script languages (shaperglot), including Finnish, Norwegian, Northern Sami and Lithuanian (with tone-mark stacking)
-- Stacked accents (Lithuanian Ė́, Ū́ and similar) rise to 1.25 em above the baseline, above the 1.0 em ascender; very tight line-heights may clip them
-- Not yet drawn: Vietnamese and non-Latin scripts
+More than 480 characters in 330 glyphs (see [CHANGELOG.md](CHANGELOG.md) for the current numbers).
+
+- **Latin:** the Google Fonts Latin Core and Latin Kernel sets in full, and all of Windows-1252. Accented capitals are composed from consistent marks, with combining marks positioned through OpenType `mark`. Covers about 350 Latin-script languages (shaperglot), including Finnish, Norwegian, Northern Sami and Lithuanian (with tone-mark stacking).
+- **Letters:** ẞ Æ Œ Ø Ł Ħ Þ Ð Ŋ Ŧ Ǥ Ʒ Ǯ and the rest of the European Latin range.
+- **Numbers:** lining figures, fractions ¼ ½ ¾ ⅓ ⅔, superscripts ⁰–⁹ and subscripts ₀–₉.
+- **Math and science:** + − × ÷ = ≠ ≈ ± ∫ ∞ ∂ ∏ ∑ √ ∆ π Ω ℓ ℮ ℃ ℉ № ⟨ ⟩, with the degree sign, primes ′ ″ and the fraction slash ⁄.
+- **Arrows and shapes:** ← ↑ → ↓ ↔ ↕ ↖ ↗ ↘ ↙, ■ □ ▲ ▼ ▶ ◀ ◆ ◇ ◊ ▪ Ⓓ and ✓.
+- **Punctuation and currency:** typographic quotes and guillemets, dashes, bullets, daggers, and $ ¢ £ ¤ ¥ € ₹.
+- Stacked accents (Lithuanian Ė́, Ū́ and similar) rise to 1.25 em above the baseline, above the 1.0 em ascender; very tight line-heights may clip them. A few tall glyphs (∂ ∑ ∏ ∫ ℓ ↕ and the fractions) run 1 cell below the baseline to 6 above, so use a line-height of at least 1.4.
+- Not yet drawn: Vietnamese and non-Latin scripts.
 
 ## Download
 
