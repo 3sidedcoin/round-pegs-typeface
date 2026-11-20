@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.016
+- The cedilla now hangs from the letter: the mark moved up 1 cell so it joins the base instead of floating 1 cell below it. Applies to Ç Ş Ģ Ķ Ļ Ņ Ŗ Ţ and the spacing and combining cedilla (the comma-below on Ș Ț is unchanged). Ç and the rest descend 1 cell instead of 2. Version bumped so installed copies are replaced.
+
 ## 1.015
 - Redrew the degree sign ° as a simplified round ring (4 cells around a hole, the same construction as º); ℃ and ℉ pick it up
 - Added ℃ (U+2103) and ℉ (U+2109), composed from the degree sign and C / F with the same spacing as typing them, so pasted text with the combined characters stays in the font. Version bumped so installed copies are replaced.
