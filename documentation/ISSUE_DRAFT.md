@@ -46,7 +46,8 @@ Updated the repo to v1.019. Changes since v1.012:
 
 - Added arrows ↖ ↗ ↘ ↙ ↔ ↕, ⅓ ⅔, the fraction slash ⁄, ‖, № and primes ′ ″.
 - Windows-1252 is now fully covered (added µ ¬ † ‡ ƒ ‰ ¦ ¤ ± ¹ ² ³ ¼ ½ ¾). Also added ⁰ ⁴-⁹ and ₀-₉.
-- 316 glyphs, 466 characters; Latin Core and Latin Kernel remain at 100%.
+- Added math and symbols ≠ ≈ ∫ ∞ ⟨ ⟩ ∂ ∏ ∑ π √ ∆ Ω ℓ ℮ ✓, shapes ■ □ ▲ ▼ ▶ ◀ ◆ ◇ ◊ ▪ Ⓓ, ℃ ℉, and simplified the dashes and the degree sign. The cedilla now attaches to its letter.
+- 330 glyphs, 482 characters; Latin Core and Latin Kernel remain at 100%, and Latin Plus is at 76 of 110.
 - Redrew % and the fractions' numerators; spacing is documented, with kerning only for LV, LY and LT.
 - FontBakery `check-googlefonts`: 0 FATAL, 0 FAIL, 6 WARN, 112 PASS (new warning: outline alignment on ↕, a few fillet points 1.5 units under the baseline).
 
