@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.015
+- Added ℃ (U+2103) and ℉ (U+2109), composed from the degree sign and C / F with the same spacing as typing them, so pasted text with the combined characters stays in the font. Version bumped so installed copies are replaced.
+
 ## 1.014
 - Version bumped so installing the new files replaces 1.013 in font managers and design tools
 - Simplified the en dash and em dash to plain bars (no decorative pinch); en dash is 3 cells wide, em dash 5
