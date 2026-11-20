@@ -88,6 +88,8 @@
     <string>G_dotaccent.glif</string>
     <key>H</key>
     <string>H_.glif</string>
+    <key>H18543</key>
+    <string>H_18543.glif</string>
     <key>H22073</key>
     <string>H_22073.glif</string>
     <key>Hbar</key>
@@ -624,6 +626,10 @@
     <string>uni2113.glif</string>
     <key>uni2126</key>
     <string>uni2126.glif</string>
+    <key>uni2206</key>
+    <string>uni2206.glif</string>
+    <key>uni24B9</key>
+    <string>uni24B_9.glif</string>
     <key>uni25B4</key>
     <string>uni25B_4.glif</string>
     <key>uni25B6</key>
