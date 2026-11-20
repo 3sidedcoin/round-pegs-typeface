@@ -111,6 +111,11 @@
       <string>notequal</string>
       <string>approxequal</string>
       <string>integral</string>
+      <string>partialdiff</string>
+      <string>product</string>
+      <string>summation</string>
+      <string>pi</string>
+      <string>uni2713</string>
       <string>infinity</string>
       <string>uni27E8</string>
       <string>uni27E9</string>

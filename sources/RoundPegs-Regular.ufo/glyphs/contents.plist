@@ -444,6 +444,8 @@
     <string>parenleft.glif</string>
     <key>parenright</key>
     <string>parenright.glif</string>
+    <key>partialdiff</key>
+    <string>partialdiff.glif</string>
     <key>percent</key>
     <string>percent.glif</string>
     <key>period</key>
@@ -452,10 +454,14 @@
     <string>periodcentered.glif</string>
     <key>perthousand</key>
     <string>perthousand.glif</string>
+    <key>pi</key>
+    <string>pi.glif</string>
     <key>plus</key>
     <string>plus.glif</string>
     <key>plusminus</key>
     <string>plusminus.glif</string>
+    <key>product</key>
+    <string>product.glif</string>
     <key>question</key>
     <string>question.glif</string>
     <key>questiondown</key>
@@ -504,6 +510,8 @@
     <string>space.glif</string>
     <key>sterling</key>
     <string>sterling.glif</string>
+    <key>summation</key>
+    <string>summation.glif</string>
     <key>three</key>
     <string>three.glif</string>
     <key>threeinferior</key>
@@ -626,6 +634,8 @@
     <string>uni25C_7.glif</string>
     <key>uni25CC</key>
     <string>uni25C_C_.glif</string>
+    <key>uni2713</key>
+    <string>uni2713.glif</string>
     <key>uni27E8</key>
     <string>uni27E_8.glif</string>
     <key>uni27E9</key>
