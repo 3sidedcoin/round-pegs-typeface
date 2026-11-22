@@ -28,6 +28,7 @@ for ch in 'DEFGIKLMNOPQRSTUVWX':
 for low in 'abchjyz':  # capitals exported with lowercase file names
     MAP[low] = (low.upper(), [])
 MAP.update({
+    'five': ('5', []),  # designer-drawn 5 replaces the source digit (it already carries its own fillets)
     'colon': ('colon', []), 'comma': ('comma', []), 'period': ('period', []),
     'hyphen': ('hyphen', []), 'exclamation mark': ('exclam', []),
     'q-mark': ('question', []), 'semi-colon': ('semicolon', []),
@@ -284,7 +285,7 @@ def main():
         comp = op(dpath, lp, PathOp.UNION)
         comp.simplify(fix_winding=True, clockwise=True)
         add_glyph(name, [cp], comp, dadv + hmtx[letter][0], f'{name} = degree + {letter}')
-    for ch in '0123456789':  # original digits + additive stars at corner-touch junctions
+    for ch in '012346789':  # original digits + additive stars at corner-touch junctions (5 comes from five.svg)
         path = Path(); gs0[ch].draw(path.getPen())
         path.simplify(fix_winding=True)
         pts = digit_junctions(gs0, ch)
