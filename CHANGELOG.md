@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.020
+- Redrew S and 5 so they are no longer near-twins: S now has a short, rounded top bar and 5 a flat, full-width top. They differ in three cells instead of two, and the difference sits in the top bar where the eye looks. The accented S letters rebuild from the new S; the superscript and subscript 5 are unchanged.
+- The 5 is now a drawn glyph (sources/svg/five.svg) instead of the source digit plus corner stars
+- Version bumped so installed copies are replaced
+
 ## 1.019
 - Added ∆ (U+2206 increment, shared with the Greek capital delta U+0394), ▪ (U+25AA) and Ⓓ (U+24B9), all designer-drawn. ∆ is a 5-cell hollow triangle with the star fillets at its diagonal joins; ▪ is 2×2 cells, centred on the middle of the cap height (half-cell vertical offset); Ⓓ is a 6×7 ring from 1 cell below the baseline to 6 above, with a solid d-shaped letter inside.
 - Version bumped so installed copies are replaced
