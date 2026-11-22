@@ -1,4 +1,4 @@
-Round Pegs v1.012 — language coverage (Latin script, checked with shaperglot)
+Round Pegs — language coverage (Latin script, checked with shaperglot on v1.012; every Latin letter and mark was already in at v1.012 and none has been removed since, only symbols were added and S and 5 redrawn)
 
 FULLY COVERED (349)
 Achinese
