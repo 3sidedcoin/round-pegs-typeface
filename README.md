@@ -20,7 +20,7 @@ Designed by Tejas at [3 Sided Coin](https://3sided.co.in). Originally made for t
 - **Arrows and shapes:** ← ↑ → ↓ ↔ ↕ ↖ ↗ ↘ ↙, ■ □ ▲ ▼ ▶ ◀ ◆ ◇ ◊ ▪ Ⓓ and ✓.
 - **Punctuation and currency:** typographic quotes and guillemets, dashes, bullets, daggers, and $ ¢ £ ¤ ¥ € ₹.
 - **Stylistic alternates**, each in its own set so you can mix them: `ss01` alternate R (notched right side, including Ŕ Ř Ŗ) and `ss02` alternate 1 (plain stem with a foot). In CSS: `font-feature-settings: "ss01", "ss02";`.
-- Stacked accents (Lithuanian Ė́, Ū́ and similar) rise to 1.25 em above the baseline, above the 1.0 em ascender; very tight line-heights may clip them. A few tall glyphs (∂ ∑ ∏ ∫ ℓ ↕ and the fractions) run 1 cell below the baseline to 6 above, so use a line-height of at least 1.4.
+- Stacked accents (Lithuanian Ė́, Ū́ and similar) rise to 1.25 em above the baseline, above the 1.0 em ascender; very tight line-heights may clip them. A few tall glyphs (∑ ∏ ∫ ℓ ↕ and the fractions) run 1 cell below the baseline to 6 above, so use a line-height of at least 1.4.
 - Not yet drawn: Vietnamese and non-Latin scripts.
 
 ## Download

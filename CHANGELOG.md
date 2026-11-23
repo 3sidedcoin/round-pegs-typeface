@@ -2,6 +2,7 @@
 
 ## 1.021
 - Added stylistic alternates, each in its own set so they can be mixed: `ss01` alternate R (notched right side) and `ss02` alternate 1 (plain stem with a foot), both designer-drawn. The accented forms of R (Ŕ Ř Ŗ) have alternates too, and the alternate R takes combining marks. The default R and 1 are unchanged.
+- Redrew ∂ (partial differential) at cap height: 4 cells wide and 5 tall, sitting on the baseline, instead of 5 wide and running from 1 cell below the baseline to 6 above, so it no longer towers over neighbouring letters
 - Refined the default A: the inner curve at the foot of its left leg is now rounded, and every accented A rebuilds from it
 - Figures 0–9 are now designer-drawn (sources/svg/zero.svg … nine.svg) with their corner fillets drawn in, replacing the source digits plus computed stars. Shapes are the same except small fillets added at diagonal joins on 0, 2, 4, 5, 6 and 9. Figures stay tabular (5 cells wide each).
 - ℃ and ℉ now have no gap between the degree ring and the letter; the join gets the same star fillet as other diagonal joins. Typing ° and C separately keeps the normal spacing.

@@ -46,7 +46,7 @@ Updated the repo to v1.021. Changes since v1.012:
 
 - Added arrows ↖ ↗ ↘ ↙ ↔ ↕, ⅓ ⅔, the fraction slash ⁄, ‖, № and primes ′ ″.
 - Windows-1252 is now fully covered (added µ ¬ † ‡ ƒ ‰ ¦ ¤ ± ¹ ² ³ ¼ ½ ¾). Also added ⁰ ⁴-⁹ and ₀-₉.
-- Added math and symbols ≠ ≈ ∫ ∞ ⟨ ⟩ ∂ ∏ ∑ π √ ∆ Ω ℓ ℮ ✓, shapes ■ □ ▲ ▼ ▶ ◀ ◆ ◇ ◊ ▪ Ⓓ, ℃ ℉, and simplified the dashes and the degree sign. The cedilla now attaches to its letter. Added stylistic alternates, each in its own set: ss01 (R) and ss02 (1), redrew the figures with fillets built in and refined the inner curve of the A, and set ℃ ℉ with no gap between the ring and the letter.
+- Added math and symbols ≠ ≈ ∫ ∞ ⟨ ⟩ ∂ ∏ ∑ π √ ∆ Ω ℓ ℮ ✓, shapes ■ □ ▲ ▼ ▶ ◀ ◆ ◇ ◊ ▪ Ⓓ, ℃ ℉, and simplified the dashes and the degree sign. The cedilla now attaches to its letter. Added stylistic alternates, each in its own set: ss01 (R) and ss02 (1), redrew the figures with fillets built in and refined the inner curve of the A, redrew ∂ at cap height, and set ℃ ℉ with no gap between the ring and the letter.
 - 335 glyphs, 482 characters; Latin Core and Latin Kernel remain at 100%, and Latin Plus is at 76 of 110.
 - Redrew % and the fractions' numerators; spacing is documented, with kerning only for LV, LY and LT.
 - FontBakery `check-googlefonts`: 0 FATAL, 0 FAIL, 6 WARN, 112 PASS (new warning: outline alignment on ↕, a few fillet points 1.5 units under the baseline).
