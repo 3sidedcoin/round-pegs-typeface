@@ -76,18 +76,19 @@ mk = [g for g in order if gd.get(g) == 3]; bs = [g for g in order if gd.get(g) =
 fea.append('table GDEF {')
 fea.append('  GlyphClassDef [' + ' '.join(bs) + '], , [' + ' '.join(mk) + '], ;')
 fea.append('} GDEF;')
-# stylistic set 1 (alternate R and 1), read back from GSUB
+# stylistic sets (ss01 alternate R, ss02 alternate 1, ss03 alternate A), read back from GSUB
+SS_NAMES = {'ss01': 'Alternate R', 'ss02': 'Alternate 1', 'ss03': 'Alternate A'}
 if 'GSUB' in f:
     gsub = f['GSUB'].table
-    for fr in gsub.FeatureList.FeatureRecord:
-        if fr.FeatureTag == 'ss01':
-            fea.append('feature ss01 {')
-            fea.append('  featureNames { name "Alternate R and 1"; };')
+    for fr in sorted(gsub.FeatureList.FeatureRecord, key=lambda r: r.FeatureTag):
+        if fr.FeatureTag in SS_NAMES:
+            fea.append(f'feature {fr.FeatureTag} {{')
+            fea.append(f'  featureNames {{ name "{SS_NAMES[fr.FeatureTag]}"; }};')
             for li in fr.Feature.LookupListIndex:
                 for st in gsub.LookupList.Lookup[li].SubTable:
                     for a_, b_ in st.mapping.items():
                         fea.append(f'  sub {a_} by {b_};')
-            fea.append('} ss01;')
+            fea.append(f'}} {fr.FeatureTag};')
             fea.append('')
 import os
 kp = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'kern.fea')

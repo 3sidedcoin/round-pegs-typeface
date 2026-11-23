@@ -29,7 +29,7 @@ for low in 'abchjyz':  # capitals exported with lowercase file names
     MAP[low] = (low.upper(), [])
 MAP.update({
     'zero': ('0', []), 'one': ('1', []), 'two': ('2', []), 'three': ('3', []), 'four': ('4', []), 'six': ('6', []), 'seven': ('7', []), 'eight': ('8', []), 'nine': ('9', []),  # designer-drawn digits (stars included)
-    'one-alt': ('one.ss01', []), 'R-alt': ('R.ss01', []),  # stylistic set 1: alternate 1 and R
+    'R-alt': ('R.ss01', []), 'one-alt': ('one.ss02', []), 'A-alt': ('A.ss03', []),  # stylistic sets: ss01 alternate R, ss02 alternate 1, ss03 alternate A
     'five': ('5', []),  # designer-drawn 5 replaces the source digit (it already carries its own fillets)
     'colon': ('colon', []), 'comma': ('comma', []), 'period': ('period', []),
     'hyphen': ('hyphen', []), 'exclamation mark': ('exclam', []),
@@ -267,7 +267,7 @@ def main():
         W, H, shapes = load_svg(stem)
         path = combine(stem, shapes)
         adv = int(round(W * S)) + GAP
-        if name in ('1', 'one.ss01'):  # figures are tabular: centre the 3-cell ink in the 5-cell advance
+        if name in ('1', 'one.ss02'):  # figures are tabular: centre the 3-cell ink in the 5-cell advance
             adv = 5 * GAP
             sh = Path(); path.draw(TransformPen(sh.getPen(), (1, 0, 0, 1, (adv - int(round(W * S))) / 2, 0)))
             path = sh

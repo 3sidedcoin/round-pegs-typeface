@@ -50,8 +50,9 @@
       <string>Y</string>
       <string>Z</string>
       <string>u2026</string>
-      <string>one.ss01</string>
       <string>R.ss01</string>
+      <string>one.ss02</string>
+      <string>A.ss03</string>
       <string>at</string>
       <string>ampersand</string>
       <string>quoteright</string>
@@ -305,9 +306,20 @@
       <string>Wdieresis</string>
       <string>Ygrave</string>
       <string>uni1EBC</string>
+      <string>Agrave.ss03</string>
+      <string>Aacute.ss03</string>
+      <string>Acircumflex.ss03</string>
+      <string>Atilde.ss03</string>
+      <string>Adieresis.ss03</string>
+      <string>Aring.ss03</string>
+      <string>Amacron.ss03</string>
+      <string>Abreve.ss03</string>
+      <string>Aogonek.ss03</string>
       <string>Racute.ss01</string>
       <string>uni0156.ss01</string>
       <string>Rcaron.ss01</string>
+      <string>uni01CD.ss03</string>
+      <string>uni0226.ss03</string>
       <string>dieresis</string>
       <string>acute</string>
       <string>macron</string>
