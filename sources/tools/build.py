@@ -28,6 +28,8 @@ for ch in 'DEFGIKLMNOPQRSTUVWX':
 for low in 'abchjyz':  # capitals exported with lowercase file names
     MAP[low] = (low.upper(), [])
 MAP.update({
+    'zero': ('0', []), 'one': ('1', []), 'two': ('2', []), 'three': ('3', []), 'four': ('4', []), 'six': ('6', []), 'seven': ('7', []), 'eight': ('8', []), 'nine': ('9', []),  # designer-drawn digits (stars included)
+    'R-alt': ('R.ss01', []), 'one-alt': ('one.ss02', []),  # stylistic sets: ss01 alternate R, ss02 alternate 1
     'five': ('5', []),  # designer-drawn 5 replaces the source digit (it already carries its own fillets)
     'colon': ('colon', []), 'comma': ('comma', []), 'period': ('period', []),
     'hyphen': ('hyphen', []), 'exclamation mark': ('exclam', []),
@@ -265,6 +267,10 @@ def main():
         W, H, shapes = load_svg(stem)
         path = combine(stem, shapes)
         adv = int(round(W * S)) + GAP
+        if name in ('1', 'one.ss02'):  # figures are tabular: centre the 3-cell ink in the 5-cell advance
+            adv = 5 * GAP
+            sh = Path(); path.draw(TransformPen(sh.getPen(), (1, 0, 0, 1, (adv - int(round(W * S))) / 2, 0)))
+            path = sh
         add_glyph(name, cps, path, adv, stem)
         if stem == 'Slash':  # backslash = slash mirrored left-right about the canvas centre
             bs = Path()
@@ -280,12 +286,12 @@ def main():
     for cp, name, letter in [(0x2103, 'uni2103', 'C'), (0x2109, 'uni2109', 'F')]:  # degree Celsius / Fahrenheit = degree sign + letter, same spacing as typing them
         dW, dH, dshapes = load_svg('degree')
         dpath = combine('degree', dshapes)
-        dadv = int(round(dW * S)) + GAP
-        lp = Path(); gs0[letter].draw(TransformPen(lp.getPen(), (1, 0, 0, 1, dadv, 0)))
+        doff = int(round(dW * S))  # zero gap: the letter starts where the ring ends (typed degree + letter keeps the normal 1-cell gap)
+        lp = Path(); gs0[letter].draw(TransformPen(lp.getPen(), (1, 0, 0, 1, doff, 0)))
         comp = op(dpath, lp, PathOp.UNION)
         comp.simplify(fix_winding=True, clockwise=True)
-        add_glyph(name, [cp], comp, dadv + hmtx[letter][0], f'{name} = degree + {letter}')
-    for ch in '012346789':  # original digits + additive stars at corner-touch junctions (5 comes from five.svg)
+        add_glyph(name, [cp], comp, doff + hmtx[letter][0], f'{name} = degree + {letter}')
+    for ch in '':  # original digits + additive stars at corner-touch junctions (5 comes from five.svg)
         path = Path(); gs0[ch].draw(path.getPen())
         path.simplify(fix_winding=True)
         pts = digit_junctions(gs0, ch)

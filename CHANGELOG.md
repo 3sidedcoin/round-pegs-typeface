@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.021
+- Added stylistic alternates, each in its own set so they can be mixed: `ss01` alternate R (notched right side) and `ss02` alternate 1 (plain stem with a foot), both designer-drawn. The accented forms of R (Ŕ Ř Ŗ) have alternates too, and the alternate R takes combining marks. The default R and 1 are unchanged.
+- Redrew ∂ (partial differential) at cap height: 4 cells wide and 5 tall, sitting on the baseline, instead of 5 wide and running from 1 cell below the baseline to 6 above, so it no longer towers over neighbouring letters
+- Refined the default A: the inner curve at the foot of its left leg is now rounded, and every accented A rebuilds from it
+- Figures 0–9 are now designer-drawn (sources/svg/zero.svg … nine.svg) with their corner fillets drawn in, replacing the source digits plus computed stars. Shapes are the same except small fillets added at diagonal joins on 0, 2, 4, 5, 6 and 9. Figures stay tabular (5 cells wide each).
+- ℃ and ℉ now have no gap between the degree ring and the letter (the letter starts where the ring ends, with the ring sitting above the cap line as usual). Typing ° and C separately keeps the normal 1-cell gap.
+- Dashes now step up in width: the en dash is 4 cells (half an em, was 3) and the em dash is 7 cells (a full em with its gap, was 5), so the em dash is clearly wider than the minus (5) and the en dash is wider than the hyphen (2). Both designer-drawn bars on the same height as before.
+- Redrew ✓ at cap height: 6 cells wide and 5 tall (was 5 by 4), keeping the same 45° staircase; advance is now 7 cells
+- Version bumped so installed copies are replaced
+
 ## 1.020
 - Redrew S and 5 so they are no longer near-twins: S now has a short, rounded top bar and 5 a flat, full-width top. They differ in three cells instead of two, and the difference sits in the top bar where the eye looks. The accented S letters rebuild from the new S; the superscript and subscript 5 are unchanged.
 - The 5 is now a drawn glyph (sources/svg/five.svg) instead of the source digit plus corner stars

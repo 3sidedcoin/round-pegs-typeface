@@ -26,9 +26,9 @@ By opening this issue, I confirm the project meets the following requirements:
 
 **Notes:**
 
-- Version 1.020: 330 glyphs, 482 characters. Covers the Google Fonts Latin Core and Latin Kernel glyphsets in full (319 and 116 of 319 and 116), the whole of Windows-1252 (the soft hyphen is left out on purpose, following FontBakery's recommendation), and 76 of the 110 glyphs in the optional Latin Plus set (fractions, super- and subscript digits, currency and typographic marks). Covers about 350 Latin-script languages (shaperglot), including Finnish, Norwegian, Northern Sami and Lithuanian with tone-mark stacking. Vietnamese and non-Latin scripts are not drawn.
+- Version 1.021: 335 glyphs, 482 characters. Covers the Google Fonts Latin Core and Latin Kernel glyphsets in full (319 and 116 of 319 and 116), the whole of Windows-1252 (the soft hyphen is left out on purpose, following FontBakery's recommendation), and 76 of the 110 glyphs in the optional Latin Plus set (fractions, super- and subscript digits, currency and typographic marks). Covers about 350 Latin-script languages (shaperglot), including Finnish, Norwegian, Northern Sami and Lithuanian with tone-mark stacking. Vietnamese and non-Latin scripts are not drawn.
 - Capitals-only by design: lowercase maps to the capitals. Spacing is the whole-cell grid itself (1-cell gaps), with three kerning pairs (LV, LY, LT) that sit flush. Rules are in documentation/DESIGN.md.
-- FontBakery `check-googlefonts` on v1.020 (fonts/ttf/RoundPegs-Regular.ttf): 0 FATAL, 0 FAIL, 6 WARN, 112 PASS. The warnings are alt_caron (Dcaron, Lcaron and Tcaron are composed from base letter and mark), contour count (pixel outlines), article (added after onboarding), unreachable combining-mark subsets, the unregistered vendor ID 3SDC, and outline alignment on ↕ (fillet points 1.5 units under the baseline, from the drawn star joins).
+- FontBakery `check-googlefonts` on v1.021 (fonts/ttf/RoundPegs-Regular.ttf): 0 FATAL, 0 FAIL, 6 WARN, 112 PASS. The warnings are alt_caron (Dcaron, Lcaron and Tcaron are composed from base letter and mark), contour count (pixel outlines), article (added after onboarding), unreachable combining-mark subsets, the unregistered vendor ID 3SDC, and outline alignment on ↕ (fillet points 1.5 units under the baseline, from the drawn star joins).
 - Editable source: sources/RoundPegs-Regular.ufo, with sources/config.yaml and sources/build.sh (fontmake). The original per-glyph SVG drawings are in sources/svg. The generators (build, release, kerning) are in sources/tools.
 - Renamed from "Edge Case" to "Round Pegs" before onboarding; repo renamed to round-pegs-typeface.
 - AI disclosure: all glyph shapes were drawn by me. An AI assistant (Claude, by Anthropic) helped write the build and release scripts, composed derived glyphs (accented capitals, subscripts from the superscript drawings, a few ligatures) from my drawn marks and letters, and checked the font against the Google Fonts glyph sets.
@@ -42,13 +42,13 @@ By opening this issue, I confirm the project meets the following requirements:
 
 ## Comment to post on the open issue (update since the last comment)
 
-Updated the repo to v1.020. Changes since v1.012:
+Updated the repo to v1.021. Changes since v1.012:
 
 - Added arrows ↖ ↗ ↘ ↙ ↔ ↕, ⅓ ⅔, the fraction slash ⁄, ‖, № and primes ′ ″.
 - Windows-1252 is now fully covered (added µ ¬ † ‡ ƒ ‰ ¦ ¤ ± ¹ ² ³ ¼ ½ ¾). Also added ⁰ ⁴-⁹ and ₀-₉.
-- Added math and symbols ≠ ≈ ∫ ∞ ⟨ ⟩ ∂ ∏ ∑ π √ ∆ Ω ℓ ℮ ✓, shapes ■ □ ▲ ▼ ▶ ◀ ◆ ◇ ◊ ▪ Ⓓ, ℃ ℉, and simplified the dashes and the degree sign. The cedilla now attaches to its letter.
-- 330 glyphs, 482 characters; Latin Core and Latin Kernel remain at 100%, and Latin Plus is at 76 of 110.
+- Added math and symbols ≠ ≈ ∫ ∞ ⟨ ⟩ ∂ ∏ ∑ π √ ∆ Ω ℓ ℮ ✓, shapes ■ □ ▲ ▼ ▶ ◀ ◆ ◇ ◊ ▪ Ⓓ, ℃ ℉, and simplified the dashes and the degree sign. The cedilla now attaches to its letter. Added stylistic alternates, each in its own set: ss01 (R) and ss02 (1), redrew the figures with fillets built in and refined the inner curve of the A, redrew ∂ at cap height, and set ℃ ℉ with no gap between the ring and the letter.
+- 335 glyphs, 482 characters; Latin Core and Latin Kernel remain at 100%, and Latin Plus is at 76 of 110.
 - Redrew % and the fractions' numerators; spacing is documented, with kerning only for LV, LY and LT.
 - FontBakery `check-googlefonts`: 0 FATAL, 0 FAIL, 6 WARN, 112 PASS (new warning: outline alignment on ↕, a few fillet points 1.5 units under the baseline).
 
-Repo: https://github.com/3sidedcoin/round-pegs-typeface (tag v1.020). Happy to adjust anything before onboarding.
+Repo: https://github.com/3sidedcoin/round-pegs-typeface (tag v1.021). Happy to adjust anything before onboarding.

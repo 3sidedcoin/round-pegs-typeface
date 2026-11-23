@@ -148,6 +148,39 @@ for cp in list(range(0xC0, 0x250)) + [0x1E80, 0x1E82, 0x1E84, 0x1EF2, 0x1EBC]:
         lc = ch.lower()
         if len(lc) == 1: t.cmap[ord(lc)] = gname
     composed.append((ch, dx))
+# --- stylistic sets: accented capitals rebuilt on the alternate bases (R = ss01); reached through GSUB, no cmap entries ----
+ALT_BASE = {'R': ('R.ss01', 'ss01')}
+SS_PAIRS = {'ss01': [('R', 'R.ss01')], 'ss02': [('one', 'one.ss02')]}
+for cp in list(range(0xC0, 0x250)) + [0x1E80, 0x1E82, 0x1E84, 0x1EF2, 0x1EBC]:
+    ch = chr(cp)
+    if not ch.isupper(): continue
+    d = unicodedata.normalize('NFD', ch)
+    if not (len(d) == 2 and d[0] in ALT_BASE and ord(d[1]) in MARKS): continue
+    base, ss = ALT_BASE[d[0]]
+    adv_b, lsb_b = font['hmtx'][base]
+    bb = BoundsPen(gs); gs[base].draw(bb)
+    mp, fw = mark_data[ord(d[1])]
+    if ord(d[1]) in ANCHOR_RIGHT:
+        dx = bb.bounds[2] - fw
+    else:
+        dx = (adv_b - 140) / 2 - fw / 2
+    dx = int(round(dx / 35)) * 35
+    plain = UV2AGL.get(cp, f'uni{cp:04X}')
+    gname = f'{plain}.{ss}'
+    bp_ = PPath(); gs[base].draw(bp_.getPen())
+    mk = PPath(); mp.draw(TransformPen(mk.getPen(), (1, 0, 0, 1, dx, 0)))
+    res = pop(bp_, mk, POp.UNION); res.simplify(fix_winding=True, clockwise=True)
+    rr = RecordingPen(); res.draw(rr)
+    pen = T2CharStringPen(adv_b, None)
+    for op_, args in clean(rr.value)[0]:
+        getattr(pen, op_)(*args)
+    top.CharStrings.charStringsIndex.append(pen.getCharString(private, gsubrs))
+    top.CharStrings.charStrings[gname] = len(top.CharStrings.charStringsIndex) - 1
+    order.append(gname)
+    if top.charset is not order: top.charset.append(gname)
+    rb = BoundsPen(None); res.draw(rb)
+    font['hmtx'].metrics[gname] = (adv_b, int(rb.bounds[0]))
+    SS_PAIRS[ss].append((plain, gname))
 font.setGlyphOrder(order)
 print('composed', len(composed), 'accented capitals; half-cell offsets:', sum(1 for _, dx in composed if dx % 140))
 print(''.join(c for c, _ in composed))
@@ -182,7 +215,7 @@ for mcp, (mp, fw) in mark_data.items():
     put_mark_glyph(gname, [mcp], mp, fw, 0)
     COMB.append((gname, fw, mcp in ANCHOR_RIGHT)); COMB_NAME[mcp] = (gname, fw)
 font.setGlyphOrder(order)
-BASES = [cm0[c] for c in range(65, 91)]
+BASES = [cm0[c] for c in range(65, 91)] + ['R.ss01']
 cm1 = font.getBestCmap()
 OGON_BASES = [cm1[c] for c in (0x104, 0x118, 0x12E, 0x172)]      # Lithuanian: ogonek below, tone mark above
 RAISED_BASES = [cm1[c] for c in (0x116, 0x130, 0x16A)]                  # Lithuanian: dot above, tone mark stacked over it
@@ -312,6 +345,10 @@ def add_mark_gpos(path):
     lines.append('feature mkmk {')
     lines.append(f'  pos mark {dg} <anchor {round(dfw * k / 2)} {STACK}> mark @TOP;')
     lines.append('} mkmk;')
+    for tag, nm in (('ss01', 'Alternate R'), ('ss02', 'Alternate 1')):
+        lines.append(f'feature {tag} {{\n  featureNames {{ name "{nm}"; }};')
+        lines += [f'  sub {a} by {b};' for a, b in SS_PAIRS[tag]]
+        lines.append(f'}} {tag};')
     _kp = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'kern.fea')
     if os.path.exists(_kp):
         lines.append(open(_kp).read())
