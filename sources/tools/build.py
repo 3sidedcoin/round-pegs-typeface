@@ -286,10 +286,9 @@ def main():
     for cp, name, letter in [(0x2103, 'uni2103', 'C'), (0x2109, 'uni2109', 'F')]:  # degree Celsius / Fahrenheit = degree sign + letter, same spacing as typing them
         dW, dH, dshapes = load_svg('degree')
         dpath = combine('degree', dshapes)
-        doff = int(round(dW * S))  # zero gap: the ring's arm touches the letter's shoulder (typed degree + letter keeps the normal 1-cell gap)
+        doff = int(round(dW * S))  # zero gap: the letter starts where the ring ends (typed degree + letter keeps the normal 1-cell gap)
         lp = Path(); gs0[letter].draw(TransformPen(lp.getPen(), (1, 0, 0, 1, doff, 0)))
         comp = op(dpath, lp, PathOp.UNION)
-        comp = op(comp, star_path(doff, 5 * GAP), PathOp.UNION)  # ring arm and letter shoulder meet only diagonally: fillet them like every other diagonal join
         comp.simplify(fix_winding=True, clockwise=True)
         add_glyph(name, [cp], comp, doff + hmtx[letter][0], f'{name} = degree + {letter}')
     for ch in '':  # original digits + additive stars at corner-touch junctions (5 comes from five.svg)
