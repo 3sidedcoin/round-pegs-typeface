@@ -50,6 +50,8 @@
       <string>Y</string>
       <string>Z</string>
       <string>u2026</string>
+      <string>one.ss01</string>
+      <string>R.ss01</string>
       <string>at</string>
       <string>ampersand</string>
       <string>quoteright</string>
@@ -303,6 +305,9 @@
       <string>Wdieresis</string>
       <string>Ygrave</string>
       <string>uni1EBC</string>
+      <string>Racute.ss01</string>
+      <string>uni0156.ss01</string>
+      <string>Rcaron.ss01</string>
       <string>dieresis</string>
       <string>acute</string>
       <string>macron</string>

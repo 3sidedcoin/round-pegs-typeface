@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.021
+- Added stylistic set `ss01`: an alternate R (notched right side) and an alternate 1 (plain stem with a foot), both designer-drawn. Accented Ŕ Ř Ŗ have alternates too, and the alternate R takes combining marks. Turn it on with the `ss01` feature; the default R and 1 are unchanged.
+- Figures 0–9 are now designer-drawn (sources/svg/zero.svg … nine.svg) with their corner fillets drawn in, replacing the source digits plus computed stars. Shapes are the same except small fillets added at diagonal joins on 0, 2, 4, 5, 6 and 9. Figures stay tabular (5 cells wide each).
+- ℃ and ℉ now have no gap between the degree ring and the letter; the join gets the same star fillet as other diagonal joins. Typing ° and C separately keeps the normal spacing.
+- Version bumped so installed copies are replaced
+
 ## 1.020
 - Redrew S and 5 so they are no longer near-twins: S now has a short, rounded top bar and 5 a flat, full-width top. They differ in three cells instead of two, and the difference sits in the top bar where the eye looks. The accented S letters rebuild from the new S; the superscript and subscript 5 are unchanged.
 - The 5 is now a drawn glyph (sources/svg/five.svg) instead of the source digit plus corner stars

@@ -174,10 +174,16 @@
     <string>Q_.glif</string>
     <key>R</key>
     <string>R_.glif</string>
+    <key>R.ss01</key>
+    <string>R_.ss01.glif</string>
     <key>Racute</key>
     <string>R_acute.glif</string>
+    <key>Racute.ss01</key>
+    <string>R_acute.ss01.glif</string>
     <key>Rcaron</key>
     <string>R_caron.glif</string>
+    <key>Rcaron.ss01</key>
+    <string>R_caron.ss01.glif</string>
     <key>S</key>
     <string>S_.glif</string>
     <key>Sacute</key>
@@ -428,6 +434,8 @@
     <string>ogonek.glif</string>
     <key>one</key>
     <string>one.glif</string>
+    <key>one.ss01</key>
+    <string>one.ss01.glif</string>
     <key>onehalf</key>
     <string>onehalf.glif</string>
     <key>oneinferior</key>
@@ -558,6 +566,8 @@
     <string>uni0145.glif</string>
     <key>uni0156</key>
     <string>uni0156.glif</string>
+    <key>uni0156.ss01</key>
+    <string>uni0156.ss01.glif</string>
     <key>uni0162</key>
     <string>uni0162.glif</string>
     <key>uni01CD</key>

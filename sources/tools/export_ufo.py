@@ -76,6 +76,19 @@ mk = [g for g in order if gd.get(g) == 3]; bs = [g for g in order if gd.get(g) =
 fea.append('table GDEF {')
 fea.append('  GlyphClassDef [' + ' '.join(bs) + '], , [' + ' '.join(mk) + '], ;')
 fea.append('} GDEF;')
+# stylistic set 1 (alternate R and 1), read back from GSUB
+if 'GSUB' in f:
+    gsub = f['GSUB'].table
+    for fr in gsub.FeatureList.FeatureRecord:
+        if fr.FeatureTag == 'ss01':
+            fea.append('feature ss01 {')
+            fea.append('  featureNames { name "Alternate R and 1"; };')
+            for li in fr.Feature.LookupListIndex:
+                for st in gsub.LookupList.Lookup[li].SubTable:
+                    for a_, b_ in st.mapping.items():
+                        fea.append(f'  sub {a_} by {b_};')
+            fea.append('} ss01;')
+            fea.append('')
 import os
 kp = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'kern.fea')
 if os.path.exists(kp):
