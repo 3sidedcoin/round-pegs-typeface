@@ -76,8 +76,8 @@ mk = [g for g in order if gd.get(g) == 3]; bs = [g for g in order if gd.get(g) =
 fea.append('table GDEF {')
 fea.append('  GlyphClassDef [' + ' '.join(bs) + '], , [' + ' '.join(mk) + '], ;')
 fea.append('} GDEF;')
-# stylistic sets (ss01 alternate R, ss02 alternate 1, ss03 alternate A), read back from GSUB
-SS_NAMES = {'ss01': 'Alternate R', 'ss02': 'Alternate 1', 'ss03': 'Alternate A'}
+# stylistic sets (ss01 alternate R, ss02 alternate 1), read back from GSUB
+SS_NAMES = {'ss01': 'Alternate R', 'ss02': 'Alternate 1'}
 if 'GSUB' in f:
     gsub = f['GSUB'].table
     for fr in sorted(gsub.FeatureList.FeatureRecord, key=lambda r: r.FeatureTag):

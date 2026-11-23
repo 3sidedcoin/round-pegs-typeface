@@ -11,7 +11,7 @@ Designed by Tejas at [3 Sided Coin](https://3sided.co.in). Originally made for t
 
 ## Coverage
 
-**Version 1.021: 347 glyphs, 482 characters.** Latin Core and Latin Kernel in full, and 76 of the 110 glyphs in Google Fonts' optional Latin Plus set. The history of what was added is in [CHANGELOG.md](CHANGELOG.md).
+**Version 1.021: 335 glyphs, 482 characters.** Latin Core and Latin Kernel in full, and 76 of the 110 glyphs in Google Fonts' optional Latin Plus set. The history of what was added is in [CHANGELOG.md](CHANGELOG.md).
 
 - **Latin:** the Google Fonts Latin Core and Latin Kernel sets in full, and all of Windows-1252. Accented capitals are composed from consistent marks, with combining marks positioned through OpenType `mark`. Covers about 350 Latin-script languages (shaperglot), including Finnish, Norwegian, Northern Sami and Lithuanian (with tone-mark stacking).
 - **Letters:** ẞ Æ Œ Ø Ł Ħ Þ Ð Ŋ Ŧ Ǥ Ʒ Ǯ and the rest of the European Latin range.
@@ -19,7 +19,7 @@ Designed by Tejas at [3 Sided Coin](https://3sided.co.in). Originally made for t
 - **Math and science:** + − × ÷ = ≠ ≈ ± ∫ ∞ ∂ ∏ ∑ √ ∆ π Ω ℓ ℮ ℃ ℉ № ⟨ ⟩, with the degree sign, primes ′ ″ and the fraction slash ⁄.
 - **Arrows and shapes:** ← ↑ → ↓ ↔ ↕ ↖ ↗ ↘ ↙, ■ □ ▲ ▼ ▶ ◀ ◆ ◇ ◊ ▪ Ⓓ and ✓.
 - **Punctuation and currency:** typographic quotes and guillemets, dashes, bullets, daggers, and $ ¢ £ ¤ ¥ € ₹.
-- **Stylistic alternates**, each in its own set so you can mix them: `ss01` alternate R (notched right side, including Ŕ Ř Ŗ), `ss02` alternate 1 (plain stem with a foot) and `ss03` alternate A (with all its accented forms). In CSS: `font-feature-settings: "ss01", "ss03";`.
+- **Stylistic alternates**, each in its own set so you can mix them: `ss01` alternate R (notched right side, including Ŕ Ř Ŗ) and `ss02` alternate 1 (plain stem with a foot). In CSS: `font-feature-settings: "ss01", "ss02";`.
 - Stacked accents (Lithuanian Ė́, Ū́ and similar) rise to 1.25 em above the baseline, above the 1.0 em ascender; very tight line-heights may clip them. A few tall glyphs (∂ ∑ ∏ ∫ ℓ ↕ and the fractions) run 1 cell below the baseline to 6 above, so use a line-height of at least 1.4.
 - Not yet drawn: Vietnamese and non-Latin scripts.
 

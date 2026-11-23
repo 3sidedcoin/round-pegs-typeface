@@ -29,7 +29,7 @@ for low in 'abchjyz':  # capitals exported with lowercase file names
     MAP[low] = (low.upper(), [])
 MAP.update({
     'zero': ('0', []), 'one': ('1', []), 'two': ('2', []), 'three': ('3', []), 'four': ('4', []), 'six': ('6', []), 'seven': ('7', []), 'eight': ('8', []), 'nine': ('9', []),  # designer-drawn digits (stars included)
-    'R-alt': ('R.ss01', []), 'one-alt': ('one.ss02', []), 'A-alt': ('A.ss03', []),  # stylistic sets: ss01 alternate R, ss02 alternate 1, ss03 alternate A
+    'R-alt': ('R.ss01', []), 'one-alt': ('one.ss02', []),  # stylistic sets: ss01 alternate R, ss02 alternate 1
     'five': ('5', []),  # designer-drawn 5 replaces the source digit (it already carries its own fillets)
     'colon': ('colon', []), 'comma': ('comma', []), 'period': ('period', []),
     'hyphen': ('hyphen', []), 'exclamation mark': ('exclam', []),

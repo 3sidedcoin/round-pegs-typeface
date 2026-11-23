@@ -148,9 +148,9 @@ for cp in list(range(0xC0, 0x250)) + [0x1E80, 0x1E82, 0x1E84, 0x1EF2, 0x1EBC]:
         lc = ch.lower()
         if len(lc) == 1: t.cmap[ord(lc)] = gname
     composed.append((ch, dx))
-# --- stylistic sets: accented capitals rebuilt on the alternate bases (R = ss01, A = ss03); reached through GSUB, no cmap entries ----
-ALT_BASE = {'R': ('R.ss01', 'ss01'), 'A': ('A.ss03', 'ss03')}
-SS_PAIRS = {'ss01': [('R', 'R.ss01')], 'ss02': [('one', 'one.ss02')], 'ss03': [('A', 'A.ss03')]}
+# --- stylistic sets: accented capitals rebuilt on the alternate bases (R = ss01); reached through GSUB, no cmap entries ----
+ALT_BASE = {'R': ('R.ss01', 'ss01')}
+SS_PAIRS = {'ss01': [('R', 'R.ss01')], 'ss02': [('one', 'one.ss02')]}
 for cp in list(range(0xC0, 0x250)) + [0x1E80, 0x1E82, 0x1E84, 0x1EF2, 0x1EBC]:
     ch = chr(cp)
     if not ch.isupper(): continue
@@ -215,7 +215,7 @@ for mcp, (mp, fw) in mark_data.items():
     put_mark_glyph(gname, [mcp], mp, fw, 0)
     COMB.append((gname, fw, mcp in ANCHOR_RIGHT)); COMB_NAME[mcp] = (gname, fw)
 font.setGlyphOrder(order)
-BASES = [cm0[c] for c in range(65, 91)] + ['R.ss01', 'A.ss03']
+BASES = [cm0[c] for c in range(65, 91)] + ['R.ss01']
 cm1 = font.getBestCmap()
 OGON_BASES = [cm1[c] for c in (0x104, 0x118, 0x12E, 0x172)]      # Lithuanian: ogonek below, tone mark above
 RAISED_BASES = [cm1[c] for c in (0x116, 0x130, 0x16A)]                  # Lithuanian: dot above, tone mark stacked over it
@@ -345,7 +345,7 @@ def add_mark_gpos(path):
     lines.append('feature mkmk {')
     lines.append(f'  pos mark {dg} <anchor {round(dfw * k / 2)} {STACK}> mark @TOP;')
     lines.append('} mkmk;')
-    for tag, nm in (('ss01', 'Alternate R'), ('ss02', 'Alternate 1'), ('ss03', 'Alternate A')):
+    for tag, nm in (('ss01', 'Alternate R'), ('ss02', 'Alternate 1')):
         lines.append(f'feature {tag} {{\n  featureNames {{ name "{nm}"; }};')
         lines += [f'  sub {a} by {b};' for a, b in SS_PAIRS[tag]]
         lines.append(f'}} {tag};')

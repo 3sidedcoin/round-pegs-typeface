@@ -6,46 +6,26 @@
     <string>_notdef.glif</string>
     <key>A</key>
     <string>A_.glif</string>
-    <key>A.ss03</key>
-    <string>A_.ss03.glif</string>
     <key>AE</key>
     <string>A_E_.glif</string>
     <key>Aacute</key>
     <string>A_acute.glif</string>
-    <key>Aacute.ss03</key>
-    <string>A_acute.ss03.glif</string>
     <key>Abreve</key>
     <string>A_breve.glif</string>
-    <key>Abreve.ss03</key>
-    <string>A_breve.ss03.glif</string>
     <key>Acircumflex</key>
     <string>A_circumflex.glif</string>
-    <key>Acircumflex.ss03</key>
-    <string>A_circumflex.ss03.glif</string>
     <key>Adieresis</key>
     <string>A_dieresis.glif</string>
-    <key>Adieresis.ss03</key>
-    <string>A_dieresis.ss03.glif</string>
     <key>Agrave</key>
     <string>A_grave.glif</string>
-    <key>Agrave.ss03</key>
-    <string>A_grave.ss03.glif</string>
     <key>Amacron</key>
     <string>A_macron.glif</string>
-    <key>Amacron.ss03</key>
-    <string>A_macron.ss03.glif</string>
     <key>Aogonek</key>
     <string>A_ogonek.glif</string>
-    <key>Aogonek.ss03</key>
-    <string>A_ogonek.ss03.glif</string>
     <key>Aring</key>
     <string>A_ring.glif</string>
-    <key>Aring.ss03</key>
-    <string>A_ring.ss03.glif</string>
     <key>Atilde</key>
     <string>A_tilde.glif</string>
-    <key>Atilde.ss03</key>
-    <string>A_tilde.ss03.glif</string>
     <key>B</key>
     <string>B_.glif</string>
     <key>C</key>
@@ -592,8 +572,6 @@
     <string>uni0162.glif</string>
     <key>uni01CD</key>
     <string>uni01C_D_.glif</string>
-    <key>uni01CD.ss03</key>
-    <string>uni01C_D_.ss03.glif</string>
     <key>uni01CF</key>
     <string>uni01C_F_.glif</string>
     <key>uni01D1</key>
@@ -618,8 +596,6 @@
     <string>uni021E_.glif</string>
     <key>uni0226</key>
     <string>uni0226.glif</string>
-    <key>uni0226.ss03</key>
-    <string>uni0226.ss03.glif</string>
     <key>uni0228</key>
     <string>uni0228.glif</string>
     <key>uni022E</key>
