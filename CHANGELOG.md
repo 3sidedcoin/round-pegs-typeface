@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.023
+- Redrew © ® ª º as small superscript forms that sit above the letters, level with ¹ ² ³ (top at 8 cells): © and ® are 2 cells wide and 3 tall (a bare c and r), ª and º are 3 wide with the underline bar kept as drawn
+- Lowered § and ¶ by one cell so they run from one cell below the baseline to six above, matching $ ¢ and Q instead of sitting on the baseline
+- 376 glyphs, 482 characters
+- Version bumped so installed copies are replaced
+
 ## 1.022
 - Added nine more stylistic alternates, each in its own set so they can be mixed: `ss03` alternate B and `ss04` alternate P (square top-left, notched right side, matching `ss01` R), `ss05` slim I (one cell wide), `ss06` narrow Y and `ss07` narrow X (3 cells), `ss08` narrow N (4 cells), `ss09` slashed zero, `ss10` closed four, and `ss11` narrow O (4 cells). The accented forms of I, Y, N and O have alternates too (31 glyphs). Figures in `ss09` and `ss10` stay tabular. The defaults of these letters are unchanged.
 - Added contextual spacing, on by default (`calt`): in LL, LLL and LLY every L except the last becomes a 3-cell short L (`L.short`) that runs straight into the next L, and every plain O in a run of two or more Os takes the narrow O (`O.ss11`), so OO is 9 cells instead of 11. Accented L and O keep their normal shapes and spacing. Turn it off with `font-feature-settings: "calt" 0`.
