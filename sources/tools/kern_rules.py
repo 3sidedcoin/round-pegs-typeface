@@ -3,7 +3,8 @@
 Usage: python3 -I kern_rules.py RoundPegs-Regular.otf kern.fea
 
 For each rule, the closest row between the two letters is set to a target gap (in cells):
-  * 0 cells (letters touch): LV LY LT
+  * 0 cells (letters touch): LV LT
+  * -1 cell (the L's foot slides under the Y's open lower-left): LY
   * 1 cell: L+{C E J L O Q U W}, F/C/Z + any capital, E+Y, C+V, C+Y
 Pairs already at the target are left alone. All other pairs are unkerned.
 Accented capitals share their base letter's class; lowercase maps to the same glyphs.
@@ -13,7 +14,8 @@ from fontTools.ttLib import TTFont
 sys.path.insert(0, __import__('os').path.dirname(__import__('os').path.abspath(__file__)))
 import kern as K
 
-TOUCH = ['LV', 'LY', 'LT']
+TOUCH = ['LV', 'LT']
+UNDER = ['LY']   # the Y's lower-left is open for two cells, so the L foot can tuck one cell under it
 ONE = [('L', r) for r in 'CEJLOQUW'] + [(l, r) for l in 'FCZ' for r in string.ascii_uppercase] + [('E', 'Y'), ('C', 'V'), ('C', 'Y')]
 
 def main(otf, out):
@@ -27,6 +29,7 @@ def main(otf, out):
         return (adv[a] - ra) + lb
     targets = {a + b: 1 for a, b in ONE}
     targets.update({p: 0 for p in TOUCH})
+    targets.update({p: -1 for p in UNDER})
     pairs = []
     for p, t in sorted(targets.items()):
         g = mingap(*p)

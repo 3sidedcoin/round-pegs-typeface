@@ -76,8 +76,9 @@ mk = [g for g in order if gd.get(g) == 3]; bs = [g for g in order if gd.get(g) =
 fea.append('table GDEF {')
 fea.append('  GlyphClassDef [' + ' '.join(bs) + '], , [' + ' '.join(mk) + '], ;')
 fea.append('} GDEF;')
-# stylistic sets (ss01 alternate R, ss02 alternate 1), read back from GSUB
-SS_NAMES = {'ss01': 'Alternate R', 'ss02': 'Alternate 1'}
+# stylistic sets ss01-ss11, read back from GSUB
+SS_NAMES = {'ss01': 'Alternate R', 'ss02': 'Alternate 1', 'ss03': 'Alternate B', 'ss04': 'Alternate P', 'ss05': 'Slim I', 'ss06': 'Narrow Y', 'ss07': 'Narrow X',
+            'ss08': 'Narrow N', 'ss09': 'Slashed zero', 'ss10': 'Closed four', 'ss11': 'Narrow O'}
 if 'GSUB' in f:
     gsub = f['GSUB'].table
     for fr in sorted(gsub.FeatureList.FeatureRecord, key=lambda r: r.FeatureTag):
@@ -90,6 +91,8 @@ if 'GSUB' in f:
                         fea.append(f'  sub {a_} by {b_};')
             fea.append(f'}} {fr.FeatureTag};')
             fea.append('')
+# contextual spacing (default-on): L before L -> L.short; O runs -> narrow O
+fea.append("feature calt {\n  sub L' L by L.short;\n  sub O' O by O.ss11;\n  sub O.ss11 O' by O.ss11;\n} calt;\n")
 import os
 kp = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'kern.fea')
 if os.path.exists(kp):

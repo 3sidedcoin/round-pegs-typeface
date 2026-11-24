@@ -52,6 +52,16 @@
       <string>u2026</string>
       <string>R.ss01</string>
       <string>one.ss02</string>
+      <string>B.ss03</string>
+      <string>P.ss04</string>
+      <string>I.ss05</string>
+      <string>Y.ss06</string>
+      <string>X.ss07</string>
+      <string>N.ss08</string>
+      <string>zero.ss09</string>
+      <string>four.ss10</string>
+      <string>O.ss11</string>
+      <string>L.short</string>
       <string>at</string>
       <string>ampersand</string>
       <string>quoteright</string>
@@ -305,9 +315,40 @@
       <string>Wdieresis</string>
       <string>Ygrave</string>
       <string>uni1EBC</string>
+      <string>Igrave.ss05</string>
+      <string>Iacute.ss05</string>
+      <string>Icircumflex.ss05</string>
+      <string>Idieresis.ss05</string>
+      <string>Ntilde.ss08</string>
+      <string>Ograve.ss11</string>
+      <string>Oacute.ss11</string>
+      <string>Ocircumflex.ss11</string>
+      <string>Otilde.ss11</string>
+      <string>Odieresis.ss11</string>
+      <string>Yacute.ss06</string>
+      <string>Itilde.ss05</string>
+      <string>Imacron.ss05</string>
+      <string>Ibreve.ss05</string>
+      <string>Iogonek.ss05</string>
+      <string>Idotaccent.ss05</string>
+      <string>Nacute.ss08</string>
+      <string>uni0145.ss08</string>
+      <string>Ncaron.ss08</string>
+      <string>Omacron.ss11</string>
+      <string>Obreve.ss11</string>
+      <string>Ohungarumlaut.ss11</string>
       <string>Racute.ss01</string>
       <string>uni0156.ss01</string>
       <string>Rcaron.ss01</string>
+      <string>Ycircumflex.ss06</string>
+      <string>Ydieresis.ss06</string>
+      <string>uni01CF.ss05</string>
+      <string>uni01D1.ss11</string>
+      <string>uni01EA.ss11</string>
+      <string>uni01F8.ss08</string>
+      <string>uni022E.ss11</string>
+      <string>uni0232.ss06</string>
+      <string>Ygrave.ss06</string>
       <string>dieresis</string>
       <string>acute</string>
       <string>macron</string>
