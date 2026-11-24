@@ -149,8 +149,11 @@ for cp in list(range(0xC0, 0x250)) + [0x1E80, 0x1E82, 0x1E84, 0x1EF2, 0x1EBC]:
         if len(lc) == 1: t.cmap[ord(lc)] = gname
     composed.append((ch, dx))
 # --- stylistic sets: accented capitals rebuilt on the alternate bases (R = ss01); reached through GSUB, no cmap entries ----
-ALT_BASE = {'R': ('R.ss01', 'ss01')}
-SS_PAIRS = {'ss01': [('R', 'R.ss01')], 'ss02': [('one', 'one.ss02')]}
+ALT_BASE = {'R': ('R.ss01', 'ss01'), 'B': ('B.ss03', 'ss03'), 'P': ('P.ss04', 'ss04'), 'I': ('I.ss05', 'ss05'), 'Y': ('Y.ss06', 'ss06'), 'X': ('X.ss07', 'ss07'), 'N': ('N.ss08', 'ss08'), 'O': ('O.ss11', 'ss11')}
+SS_PAIRS = {'ss01': [('R', 'R.ss01')], 'ss02': [('one', 'one.ss02')], 'ss03': [('B', 'B.ss03')], 'ss04': [('P', 'P.ss04')], 'ss05': [('I', 'I.ss05')],
+            'ss06': [('Y', 'Y.ss06')], 'ss07': [('X', 'X.ss07')], 'ss08': [('N', 'N.ss08')], 'ss09': [('zero', 'zero.ss09')], 'ss10': [('four', 'four.ss10')], 'ss11': [('O', 'O.ss11')]}
+SS_NAMES = {'ss01': 'Alternate R', 'ss02': 'Alternate 1', 'ss03': 'Alternate B', 'ss04': 'Alternate P', 'ss05': 'Slim I', 'ss06': 'Narrow Y', 'ss07': 'Narrow X',
+            'ss08': 'Narrow N', 'ss09': 'Slashed zero', 'ss10': 'Closed four', 'ss11': 'Narrow O'}
 for cp in list(range(0xC0, 0x250)) + [0x1E80, 0x1E82, 0x1E84, 0x1EF2, 0x1EBC]:
     ch = chr(cp)
     if not ch.isupper(): continue
@@ -215,7 +218,7 @@ for mcp, (mp, fw) in mark_data.items():
     put_mark_glyph(gname, [mcp], mp, fw, 0)
     COMB.append((gname, fw, mcp in ANCHOR_RIGHT)); COMB_NAME[mcp] = (gname, fw)
 font.setGlyphOrder(order)
-BASES = [cm0[c] for c in range(65, 91)] + ['R.ss01']
+BASES = [cm0[c] for c in range(65, 91)] + [a for a, _ in (v for v in ALT_BASE.values())]
 cm1 = font.getBestCmap()
 OGON_BASES = [cm1[c] for c in (0x104, 0x118, 0x12E, 0x172)]      # Lithuanian: ogonek below, tone mark above
 RAISED_BASES = [cm1[c] for c in (0x116, 0x130, 0x16A)]                  # Lithuanian: dot above, tone mark stacked over it
@@ -345,10 +348,13 @@ def add_mark_gpos(path):
     lines.append('feature mkmk {')
     lines.append(f'  pos mark {dg} <anchor {round(dfw * k / 2)} {STACK}> mark @TOP;')
     lines.append('} mkmk;')
-    for tag, nm in (('ss01', 'Alternate R'), ('ss02', 'Alternate 1')):
+    for tag, nm in SS_NAMES.items():
         lines.append(f'feature {tag} {{\n  featureNames {{ name "{nm}"; }};')
         lines += [f'  sub {a} by {b};' for a, b in SS_PAIRS[tag]]
         lines.append(f'}} {tag};')
+    # contextual spacing (default-on): L before L takes the 3-cell L.short (zero gap, so LL/LLL/LLY close up); every O in a run of
+    # two or more Os takes the narrow O (O.ss11). Plain L and O only - accented forms keep their normal shapes and spacing.
+    lines.append('feature calt {\n  sub L\' L by L.short;\n  sub O\' O by O.ss11;\n  sub O.ss11 O\' by O.ss11;\n} calt;')
     _kp = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'kern.fea')
     if os.path.exists(_kp):
         lines.append(open(_kp).read())
