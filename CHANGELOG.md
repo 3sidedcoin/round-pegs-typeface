@@ -3,7 +3,7 @@
 ## 1.023
 - Redrew © ® ª º as small superscript forms that sit above the letters, level with ¹ ² ³ (top at 8 cells): © and ® are 2 cells wide and 3 tall (a bare c and r), ª and º are 3 wide with the underline bar kept as drawn
 - Lowered § and ¶ by one cell so they run from one cell below the baseline to six above, matching $ ¢ and Q instead of sitting on the baseline
-- Redrew the fractions ½ ¼ ⅓ ⅔ eight cells tall (they were ten), hanging two cells below the baseline and rising one cell above the caps, with the numerator, slash and denominator spaced so the slash stays readable at small sizes. ¾ keeps its earlier drawing for now
+- Redrew the fractions ½ ¼ ¾ ⅓ ⅔ eight cells tall (they were ten), hanging two cells below the baseline and rising one cell above the caps, with the numerator, slash and denominator spaced so the slash stays readable at small sizes
 - Redrew the ellipsis: three one-cell dots with half-cell gaps, four cells wide and on the cell grid (it was 3.5 cells)
 - 376 glyphs, 482 characters
 - Version bumped so installed copies are replaced

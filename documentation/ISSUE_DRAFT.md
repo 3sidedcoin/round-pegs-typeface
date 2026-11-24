@@ -48,7 +48,7 @@ Updated the repo to v1.023. Changes since v1.012:
 - Windows-1252 is now fully covered (added µ ¬ † ‡ ƒ ‰ ¦ ¤ ± ¹ ² ³ ¼ ½ ¾). Also added ⁰ ⁴-⁹ and ₀-₉.
 - Added math and symbols ≠ ≈ ∫ ∞ ⟨ ⟩ ∂ ∏ ∑ π √ ∆ Ω ℓ ℮ ✓, shapes ■ □ ▲ ▼ ▶ ◀ ◆ ◇ ◊ ▪ Ⓓ, ℃ ℉, and simplified the dashes and the degree sign. The cedilla now attaches to its letter. Added eleven stylistic alternates, each in its own set (ss01 R, ss02 1, ss03 B, ss04 P, ss05 slim I, ss06 narrow Y, ss07 narrow X, ss08 narrow N, ss09 slashed zero, ss10 closed four, ss11 narrow O), contextual spacing for LL, LLL, LLY and OO runs, a tighter LY kern, redrew the diagonal arrows, adjusted R and B corners, redrew the figures with fillets built in and refined the inner curve of the A, redrew ∂ at cap height, and set ℃ ℉ with no gap between the ring and the letter.
 - Redrew © ® ª º as small superscript forms (no circle; ª º keep their bar) sitting level with ¹²³, and lowered § ¶ one cell below the baseline to match $ ¢.
-- Redrew the fractions ½ ¼ ⅓ ⅔ (eight cells tall, hanging two below the baseline) and the ellipsis (four cells wide, on the grid).
+- Redrew the fractions ½ ¼ ¾ ⅓ ⅔ (eight cells tall, hanging two below the baseline) and the ellipsis (four cells wide, on the grid).
 - 376 glyphs, 482 characters; Latin Core and Latin Kernel remain at 100%, and Latin Plus is at 76 of 110.
 - Redrew % and the fractions' numerators; spacing is documented, with kerning for LV, LY and LT and the calt rules for LL and OO runs.
 - FontBakery `check-googlefonts`: 0 FATAL, 0 FAIL, 6 WARN, 112 PASS (new warning: outline alignment on ↕, a few fillet points 1.5 units under the baseline).
