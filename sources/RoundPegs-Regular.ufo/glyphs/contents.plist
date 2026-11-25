@@ -500,8 +500,12 @@
     <string>ogonek.glif</string>
     <key>one</key>
     <string>one.glif</string>
+    <key>one.pnum</key>
+    <string>one.pnum.glif</string>
     <key>one.ss02</key>
     <string>one.ss02.glif</string>
+    <key>one.ss02.pnum</key>
+    <string>one.ss02.pnum.glif</string>
     <key>onehalf</key>
     <string>onehalf.glif</string>
     <key>oneinferior</key>

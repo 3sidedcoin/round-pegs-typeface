@@ -92,6 +92,7 @@ if 'GSUB' in f:
             fea.append(f'}} {fr.FeatureTag};')
             fea.append('')
 # contextual spacing (default-on): L before L -> L.short; O runs -> narrow O
+fea.append("feature pnum {\n  sub one by one.pnum;\n  sub one.ss02 by one.ss02.pnum;\n} pnum;\nfeature tnum {\n  sub one.pnum by one;\n  sub one.ss02.pnum by one.ss02;\n} tnum;\n")
 fea.append("feature calt {\n  sub L' L by L.short;\n  sub O' O by O.ss11;\n  sub O.ss11 O' by O.ss11;\n} calt;\n")
 import os
 kp = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'kern.fea')

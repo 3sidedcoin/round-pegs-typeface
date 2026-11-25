@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.024
+- Redrew the cent sign ¢ and the dollar sign $ five cells tall (0 to 5) so they sit level with £ € ¥; both were seven cells tall. The dollar stem is now drawn as notches in the S instead of a stroke that overshoots
+- Added proportional figures (`pnum`): the 1 takes a 4-cell advance (ink flush left, one cell of gap) so 11, 2019 and 1,111 close up; the `ss02` alternate 1 has its own proportional form, and `tnum` returns to the tabular 1. The default stays tabular
+- 378 glyphs, 482 characters
+- Version bumped so installed copies are replaced
+
 ## 1.023
 - Redrew © ® ª º as small superscript forms that sit above the letters, level with ¹ ² ³ (top at 8 cells): © and ® are 2 cells wide and 3 tall (a bare c and r), ª and º are 3 wide with the underline bar kept as drawn
 - Lowered § and ¶ by one cell so they run from one cell below the baseline to six above, matching $ ¢ and Q instead of sitting on the baseline

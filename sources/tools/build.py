@@ -272,11 +272,14 @@ def main():
         adv = int(round(W * S)) + GAP
         if name == 'L.short':  # zero trailing gap: the foot runs straight into the next L's stem
             adv = int(round(W * S))
+        flush_path, prop_adv = path, adv  # proportional 1 (pnum): ink flush left, advance = ink + 1 cell
         if name in ('1', 'one.ss02'):  # figures are tabular: centre the 3-cell ink in the 5-cell advance
             adv = 5 * GAP
             sh = Path(); path.draw(TransformPen(sh.getPen(), (1, 0, 0, 1, (adv - int(round(W * S))) / 2, 0)))
             path = sh
         add_glyph(name, cps, path, adv, stem)
+        if name in ('1', 'one.ss02'):
+            add_glyph('one.pnum' if name == '1' else 'one.ss02.pnum', [], flush_path, prop_adv, stem + ' (proportional)')
         if stem == 'Slash':  # backslash = slash mirrored left-right about the canvas centre
             bs = Path()
             path.draw(TransformPen(bs.getPen(), (-1, 0, 0, 1, W * S, 0)))
