@@ -8,6 +8,20 @@ f = TTFont(SRC); gs = f.getGlyphSet(); cmap = f.getBestCmap()
 rev = {}
 for cp, g in cmap.items(): rev.setdefault(g, []).append(cp)
 
+
+def _calt_text(font):
+    """calt: L before L -> L.short; O runs -> narrow O; I with a letter on both sides -> slim I (ss05 form)."""
+    import unicodedata
+    cm = font.getBestCmap()
+    alpha = {g for cp, g in cm.items() if chr(cp).isalpha()}
+    letters = sorted(g for g in font.getGlyphOrder() if g.split('.')[0] in alpha)
+    ipairs = [(g, g + '.ss05') for g in ('I', 'Igrave', 'Iacute', 'Icircumflex', 'Idieresis', 'Itilde', 'Imacron', 'Ibreve', 'Iogonek', 'Idotaccent')
+              if g in font.getGlyphOrder() and g + '.ss05' in font.getGlyphOrder()]
+    out = '@LETTER = [' + ' '.join(letters) + '];\n'
+    out += "feature calt {\n  sub L' L by L.short;\n  sub O' O by O.ss11;\n  sub O.ss11 O' by O.ss11;\n"
+    out += ''.join(f"  sub @LETTER {a}' @LETTER by {b};\n" for a, b in ipairs)
+    return out + '} calt;'
+
 u = ufoLib2.Font()
 i = u.info
 i.familyName = f['name'].getDebugName(1); i.styleName = 'Regular'
@@ -93,7 +107,7 @@ if 'GSUB' in f:
             fea.append('')
 # contextual spacing (default-on): L before L -> L.short; O runs -> narrow O
 fea.append("feature pnum {\n  sub one by one.pnum;\n  sub one.ss02 by one.ss02.pnum;\n} pnum;\nfeature tnum {\n  sub one.pnum by one;\n  sub one.ss02.pnum by one.ss02;\n} tnum;\n")
-fea.append("feature calt {\n  sub L' L by L.short;\n  sub O' O by O.ss11;\n  sub O.ss11 O' by O.ss11;\n} calt;\n")
+fea.append(_calt_text(f) + "\n")
 import os
 kp = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'kern.fea')
 if os.path.exists(kp):
