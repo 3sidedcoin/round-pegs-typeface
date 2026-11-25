@@ -352,6 +352,10 @@ def add_mark_gpos(path):
         lines.append(f'feature {tag} {{\n  featureNames {{ name "{nm}"; }};')
         lines += [f'  sub {a} by {b};' for a, b in SS_PAIRS[tag]]
         lines.append(f'}} {tag};')
+    # figures are tabular by default; pnum gives the 1 a 4-cell advance (ink + 1 cell) so runs like 11 and 2019 close up. It is listed after
+    # the stylistic sets so ss02 + pnum picks the proportional alternate 1. tnum returns to the tabular figures.
+    lines.append('feature pnum {\n  sub one by one.pnum;\n  sub one.ss02 by one.ss02.pnum;\n} pnum;')
+    lines.append('feature tnum {\n  sub one.pnum by one;\n  sub one.ss02.pnum by one.ss02;\n} tnum;')
     # contextual spacing (default-on): L before L takes the 3-cell L.short (zero gap, so LL/LLL/LLY close up); every O in a run of
     # two or more Os takes the narrow O (O.ss11). Plain L and O only - accented forms keep their normal shapes and spacing.
     lines.append('feature calt {\n  sub L\' L by L.short;\n  sub O\' O by O.ss11;\n  sub O.ss11 O\' by O.ss11;\n} calt;')

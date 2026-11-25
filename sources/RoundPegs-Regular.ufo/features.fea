@@ -196,6 +196,15 @@ feature ss11 {
   sub uni022E by uni022E.ss11;
 } ss11;
 
+feature pnum {
+  sub one by one.pnum;
+  sub one.ss02 by one.ss02.pnum;
+} pnum;
+feature tnum {
+  sub one.pnum by one;
+  sub one.ss02.pnum by one.ss02;
+} tnum;
+
 feature calt {
   sub L' L by L.short;
   sub O' O by O.ss11;
