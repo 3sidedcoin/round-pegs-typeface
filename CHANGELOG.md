@@ -1,7 +1,7 @@
 # Changelog
 
 ## 1.024
-- Redrew the cent sign ¢ five cells tall (0 to 5) so it sits level with £ € ¥; it was seven cells tall. $ keeps its seven-cell height
+- Redrew the cent sign ¢ and the dollar sign $ five cells tall (0 to 5) so they sit level with £ € ¥; both were seven cells tall. The dollar stem is now drawn as notches in the S instead of a stroke that overshoots
 - 376 glyphs, 482 characters
 - Version bumped so installed copies are replaced
 
