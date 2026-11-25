@@ -16,7 +16,7 @@ import unicodedata
 sys.path.insert(0, '/home/claude/work')
 import build as B
 
-SRC = '/home/claude/work/out/RoundPegsBase-Regular.otf'
+SRC = '/home/claude/work/out/ShadePixel-Regular.otf'
 FAMILY = sys.argv[1]
 VERSION = float(sys.argv[2]) if len(sys.argv) > 2 else 1.0
 REPO = sys.argv[3] if len(sys.argv) > 3 else 'https://github.com/3sidedcoin/' + FAMILY.lower().replace(' ', '-')
@@ -323,6 +323,20 @@ def scale_font(path, to_upm=1024, from_cell=140):
     f.save(path)
     return k
 
+
+def _calt_text(font):
+    """calt: L before L -> L.short; O runs -> narrow O; I with a letter on both sides -> slim I (ss05 form)."""
+    import unicodedata
+    cm = font.getBestCmap()
+    alpha = {g for cp, g in cm.items() if chr(cp).isalpha()}
+    letters = sorted(g for g in font.getGlyphOrder() if g.split('.')[0] in alpha)
+    ipairs = [(g, g + '.ss05') for g in ('I', 'Igrave', 'Iacute', 'Icircumflex', 'Idieresis', 'Itilde', 'Imacron', 'Ibreve', 'Iogonek', 'Idotaccent')
+              if g in font.getGlyphOrder() and g + '.ss05' in font.getGlyphOrder()]
+    out = '@LETTER = [' + ' '.join(letters) + '];\n'
+    out += "feature calt {\n  sub L' L by L.short;\n  sub O' O by O.ss11;\n  sub O.ss11 O' by O.ss11;\n"
+    out += ''.join(f"  sub @LETTER {a}' @LETTER by {b};\n" for a, b in ipairs)
+    return out + '} calt;'
+
 def add_mark_gpos(path):
     from fontTools.feaLib.builder import addOpenTypeFeaturesFromString
     f = TTFont(path); k = 128 / 140
@@ -358,7 +372,7 @@ def add_mark_gpos(path):
     lines.append('feature tnum {\n  sub one.pnum by one;\n  sub one.ss02.pnum by one.ss02;\n} tnum;')
     # contextual spacing (default-on): L before L takes the 3-cell L.short (zero gap, so LL/LLL/LLY close up); every O in a run of
     # two or more Os takes the narrow O (O.ss11). Plain L and O only - accented forms keep their normal shapes and spacing.
-    lines.append('feature calt {\n  sub L\' L by L.short;\n  sub O\' O by O.ss11;\n  sub O.ss11 O\' by O.ss11;\n} calt;')
+    lines.append(_calt_text(f))
     _kp = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'kern.fea')
     if os.path.exists(_kp):
         lines.append(open(_kp).read())

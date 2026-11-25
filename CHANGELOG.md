@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.026
+- Added a contextual rule for I (part of `calt`): an I with a letter on both sides takes the slim 1-cell I, so PIXEL, BIG and MILLION tighten up, while a standalone I and the first or last letter of a word (I, INK, IN, IT'S) keep their bars. Accented capital Is follow the same rule. `ss05` still forces the slim I everywhere and `calt` off returns every I to the barred form
+- Version bumped so installed copies are replaced
+
 ## 1.025
 - Redrew the numero sign № with a narrower N (4 cells wide instead of 5), so the glyph is 8 cells of ink instead of 9
 - Version bumped so installed copies are replaced
