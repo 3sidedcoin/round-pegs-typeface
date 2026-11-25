@@ -11,7 +11,7 @@ Designed by Tejas at [3 Sided Coin](https://3sided.co.in). Originally made for t
 
 ## Coverage
 
-**Version 1.024: 378 glyphs, 482 characters.** Latin Core and Latin Kernel in full, and 76 of the 110 glyphs in Google Fonts' optional Latin Plus set. The history of what was added is in [CHANGELOG.md](CHANGELOG.md).
+**Version 1.025: 378 glyphs, 482 characters.** Latin Core and Latin Kernel in full, and 76 of the 110 glyphs in Google Fonts' optional Latin Plus set. The history of what was added is in [CHANGELOG.md](CHANGELOG.md).
 
 - **Latin:** the Google Fonts Latin Core and Latin Kernel sets in full, and all of Windows-1252. Accented capitals are composed from consistent marks, with combining marks positioned through OpenType `mark`. Covers about 350 Latin-script languages (shaperglot), including Finnish, Norwegian, Northern Sami and Lithuanian (with tone-mark stacking).
 - **Letters:** ẞ Æ Œ Ø Ł Ħ Þ Ð Ŋ Ŧ Ǥ Ʒ Ǯ and the rest of the European Latin range.
