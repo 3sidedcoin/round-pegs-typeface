@@ -2,6 +2,7 @@
 
 ## 1.029
 - Kerned Y and V before a period or comma (Y. Y, V. V,) by 2 cells, so the mark tucks under the arm and ends 1 cell from the stem instead of 3 away. T. is unchanged
+- Kerned ST by 1 cell: every row of the S was 2 cells from the T, and now sits 1 cell away with the T's bar overhanging the S's top-right corner
 - Version bumped so installed copies are replaced
 
 ## 1.028
