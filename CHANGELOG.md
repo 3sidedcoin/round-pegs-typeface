@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.029
+- Kerned Y and V before a period or comma (Y. Y, V. V,) by 2 cells, so the mark tucks under the arm and ends 1 cell from the stem instead of 3 away. T. is unchanged
+- Version bumped so installed copies are replaced
+
 ## 1.028
 - Gave the short L (`L.short`, used in LL, LLL and LLY) a normal 1-cell gap; it used to run straight into the next L's stem, which looked too close. LL is now 8 cells wide instead of 7 (9 without the rule)
 - Version bumped so installed copies are replaced
