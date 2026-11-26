@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.031
+- Added the option key ⌥ (5 cells on the baseline, from the drawn SVG)
+- 389 glyphs, 494 characters
+- Version bumped so installed copies are replaced
+
 ## 1.030
 - Added symbols: sun ☀ and the crescent moons ☾ and ☽ (all 6 cells tall, centred on the capital height; ☽ is ☾ mirrored), the menu bars ≡ (also mapped to ☰), the vertical ellipsis ⋮ and keyboard symbols: the command key ⌘ (6 cells, centred like the sun), tab ⇥ and back-tab ⇤ (⇤ is ⇥ mirrored), and the control caret ⌃ with its opposite ⌄ (the same drawing flipped, sitting at the bottom of the capital height)
 - 388 glyphs, 493 characters

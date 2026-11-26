@@ -534,6 +534,8 @@
     <string>onesuperior.glif</string>
     <key>onethird</key>
     <string>onethird.glif</string>
+    <key>option</key>
+    <string>option.glif</string>
     <key>ordfeminine</key>
     <string>ordfeminine.glif</string>
     <key>ordmasculine</key>
