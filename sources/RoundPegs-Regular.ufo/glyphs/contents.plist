@@ -328,6 +328,10 @@
     <string>ampersand.glif</string>
     <key>approxequal</key>
     <string>approxequal.glif</string>
+    <key>arrowbarleft</key>
+    <string>arrowbarleft.glif</string>
+    <key>arrowbarright</key>
+    <string>arrowbarright.glif</string>
     <key>arrowboth</key>
     <string>arrowboth.glif</string>
     <key>arrowdown</key>
@@ -388,6 +392,8 @@
     <string>colon.glif</string>
     <key>comma</key>
     <string>comma.glif</string>
+    <key>control</key>
+    <string>control.glif</string>
     <key>copyright</key>
     <string>copyright.glif</string>
     <key>currency</key>

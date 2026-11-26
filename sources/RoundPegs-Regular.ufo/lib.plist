@@ -125,6 +125,9 @@
       <string>sun</string>
       <string>moon</string>
       <string>moonwaxing</string>
+      <string>arrowbarright</string>
+      <string>arrowbarleft</string>
+      <string>control</string>
       <string>burger</string>
       <string>ellipsisvertical</string>
       <string>notequal</string>
