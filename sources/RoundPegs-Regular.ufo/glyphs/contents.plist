@@ -484,6 +484,8 @@
     <string>minute.glif</string>
     <key>moon</key>
     <string>moon.glif</string>
+    <key>moonwaxing</key>
+    <string>moonwaxing.glif</string>
     <key>mu</key>
     <string>mu.glif</string>
     <key>multiply</key>
