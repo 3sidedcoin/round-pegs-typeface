@@ -328,6 +328,10 @@
     <string>ampersand.glif</string>
     <key>approxequal</key>
     <string>approxequal.glif</string>
+    <key>arrowbarleft</key>
+    <string>arrowbarleft.glif</string>
+    <key>arrowbarright</key>
+    <string>arrowbarright.glif</string>
     <key>arrowboth</key>
     <string>arrowboth.glif</string>
     <key>arrowdown</key>
@@ -374,6 +378,8 @@
     <string>brokenbar.glif</string>
     <key>bullet</key>
     <string>bullet.glif</string>
+    <key>burger</key>
+    <string>burger.glif</string>
     <key>caron</key>
     <string>caron.glif</string>
     <key>cedilla</key>
@@ -386,6 +392,10 @@
     <string>colon.glif</string>
     <key>comma</key>
     <string>comma.glif</string>
+    <key>command</key>
+    <string>command.glif</string>
+    <key>control</key>
+    <string>control.glif</string>
     <key>copyright</key>
     <string>copyright.glif</string>
     <key>currency</key>
@@ -406,12 +416,16 @@
     <string>dollar.glif</string>
     <key>dotaccent</key>
     <string>dotaccent.glif</string>
+    <key>downarrowhead</key>
+    <string>downarrowhead.glif</string>
     <key>eight</key>
     <string>eight.glif</string>
     <key>eightinferior</key>
     <string>eightinferior.glif</string>
     <key>eightsuperior</key>
     <string>eightsuperior.glif</string>
+    <key>ellipsisvertical</key>
+    <string>ellipsisvertical.glif</string>
     <key>emdash</key>
     <string>emdash.glif</string>
     <key>endash</key>
@@ -478,6 +492,10 @@
     <string>minus.glif</string>
     <key>minute</key>
     <string>minute.glif</string>
+    <key>moon</key>
+    <string>moon.glif</string>
+    <key>moonwaxing</key>
+    <string>moonwaxing.glif</string>
     <key>mu</key>
     <string>mu.glif</string>
     <key>multiply</key>
@@ -596,6 +614,8 @@
     <string>sterling.glif</string>
     <key>summation</key>
     <string>summation.glif</string>
+    <key>sun</key>
+    <string>sun.glif</string>
     <key>three</key>
     <string>three.glif</string>
     <key>threeinferior</key>

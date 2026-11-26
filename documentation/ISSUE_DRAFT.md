@@ -26,9 +26,9 @@ By opening this issue, I confirm the project meets the following requirements:
 
 **Notes:**
 
-- Version 1.027: 378 glyphs, 482 characters. Covers the Google Fonts Latin Core and Latin Kernel glyphsets in full (319 and 116 of 319 and 116), the whole of Windows-1252 (the soft hyphen is left out on purpose, following FontBakery's recommendation), and 76 of the 110 glyphs in the optional Latin Plus set (fractions, super- and subscript digits, currency and typographic marks). Covers about 350 Latin-script languages (shaperglot), including Finnish, Norwegian, Northern Sami and Lithuanian with tone-mark stacking. Vietnamese and non-Latin scripts are not drawn.
-- Capitals-only by design: lowercase maps to the capitals. Spacing is the whole-cell grid itself (1-cell gaps), with three kerning pairs (LV, LT and LY sit flush against the L's foot) and two default-on contextual rules (`calt`) for LL and OO runs. Rules are in documentation/DESIGN.md.
-- FontBakery `check-googlefonts` on v1.027 (fonts/ttf/RoundPegs-Regular.ttf): 0 FATAL, 0 FAIL, 6 WARN, 112 PASS. The warnings are alt_caron (Dcaron, Lcaron and Tcaron are composed from base letter and mark), contour count (pixel outlines), article (added after onboarding), unreachable combining-mark subsets, the unregistered vendor ID 3SDC, and outline alignment on ↕ (fillet points 1.5 units under the baseline, from the drawn star joins).
+- Version 1.030: 388 glyphs, 493 characters. Covers the Google Fonts Latin Core and Latin Kernel glyphsets in full (319 and 116 of 319 and 116), the whole of Windows-1252 (the soft hyphen is left out on purpose, following FontBakery's recommendation), and 76 of the 110 glyphs in the optional Latin Plus set (fractions, super- and subscript digits, currency and typographic marks). Covers about 350 Latin-script languages (shaperglot), including Finnish, Norwegian, Northern Sami and Lithuanian with tone-mark stacking. Vietnamese and non-Latin scripts are not drawn.
+- Capitals-only by design: lowercase maps to the capitals. Spacing is the whole-cell grid itself (1-cell gaps), with eight kerning pairs (LV, LT and LY sit flush against the L's foot; ST tucks the T's bar over the S; Y. Y, V. V, tuck the mark under the arm) and two default-on contextual rules (`calt`) for LL and OO runs. Rules are in documentation/DESIGN.md.
+- FontBakery `check-googlefonts` on v1.030 (fonts/ttf/RoundPegs-Regular.ttf): 0 FATAL, 0 FAIL, 6 WARN, 112 PASS. The warnings are alt_caron (Dcaron, Lcaron and Tcaron are composed from base letter and mark), contour count (pixel outlines), article (added after onboarding), unreachable combining-mark subsets, the unregistered vendor ID 3SDC, and outline alignment on ↕ (fillet points 1.5 units under the baseline, from the drawn star joins).
 - Editable source: sources/RoundPegs-Regular.ufo, with sources/config.yaml and sources/build.sh (fontmake). The original per-glyph SVG drawings are in sources/svg. The generators (build, release, kerning) are in sources/tools.
 - Renamed from "Edge Case" to "Round Pegs" before onboarding; repo renamed to round-pegs-typeface.
 - AI disclosure: all glyph shapes were drawn by me. An AI assistant (Claude, by Anthropic) helped write the build and release scripts, composed derived glyphs (accented capitals, subscripts from the superscript drawings, a few ligatures) from my drawn marks and letters, and checked the font against the Google Fonts glyph sets.
@@ -42,7 +42,7 @@ By opening this issue, I confirm the project meets the following requirements:
 
 ## Comment to post on the open issue (update since the last comment)
 
-Updated the repo to v1.027. Changes since v1.012:
+Updated the repo to v1.030. Changes since v1.012:
 
 - Added arrows ↖ ↗ ↘ ↙ ↔ ↕, ⅓ ⅔, the fraction slash ⁄, ‖, № and primes ′ ″.
 - Windows-1252 is now fully covered (added µ ¬ † ‡ ƒ ‰ ¦ ¤ ± ¹ ² ³ ¼ ½ ¾). Also added ⁰ ⁴-⁹ and ₀-₉.
@@ -51,8 +51,8 @@ Updated the repo to v1.027. Changes since v1.012:
 - Redrew the cent and dollar signs five cells tall so they sit level with £ € ¥ (they were seven).
 - Redrew the fractions ½ ¼ ¾ ⅓ ⅔ (eight cells tall, hanging two below the baseline) and the ellipsis (four cells wide, on the grid).
 - Added proportional figures (`pnum`, with `tnum` to switch back): the 1 closes up in runs like 11 and 2019; the default stays tabular.
-- 378 glyphs, 482 characters; Latin Core and Latin Kernel remain at 100%, and Latin Plus is at 76 of 110.
+- 388 glyphs, 493 characters; Latin Core and Latin Kernel remain at 100%, and Latin Plus is at 76 of 110.
 - Redrew % and the fractions' numerators; spacing is documented, with kerning for LV, LY and LT and the calt rules for LL and OO runs.
 - FontBakery `check-googlefonts`: 0 FATAL, 0 FAIL, 6 WARN, 112 PASS (new warning: outline alignment on ↕, a few fillet points 1.5 units under the baseline).
 
-Repo: https://github.com/3sidedcoin/round-pegs-typeface (tag v1.027). Happy to adjust anything before onboarding.
+Repo: https://github.com/3sidedcoin/round-pegs-typeface (tag v1.030). Happy to adjust anything before onboarding.

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="L.short" format="2">
-  <advance width="384"/>
+  <advance width="512"/>
   <outline>
     <contour>
       <point x="128" y="192" type="line"/>

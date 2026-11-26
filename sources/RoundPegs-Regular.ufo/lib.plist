@@ -122,6 +122,16 @@
       <string>fraction</string>
       <string>dblverticalbar</string>
       <string>numero</string>
+      <string>sun</string>
+      <string>moon</string>
+      <string>moonwaxing</string>
+      <string>arrowbarright</string>
+      <string>arrowbarleft</string>
+      <string>control</string>
+      <string>downarrowhead</string>
+      <string>command</string>
+      <string>burger</string>
+      <string>ellipsisvertical</string>
       <string>notequal</string>
       <string>approxequal</string>
       <string>integral</string>
