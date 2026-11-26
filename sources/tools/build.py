@@ -103,6 +103,7 @@ MAP.update({
     'up-caret': ('control', [0x2303]),
     'down-caret': ('downarrowhead', [0x2304]),
     'command': ('command', [0x2318]),
+    'option': ('option', [0x2325]),
     'burger': ('burger', [0x2261, 0x2630]),
     'vertical-dots': ('ellipsisvertical', [0x22EE]),
     'not-equal': ('notequal', [0x2260]),
