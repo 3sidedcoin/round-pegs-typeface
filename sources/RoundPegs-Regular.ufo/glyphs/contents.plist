@@ -374,6 +374,8 @@
     <string>brokenbar.glif</string>
     <key>bullet</key>
     <string>bullet.glif</string>
+    <key>burger</key>
+    <string>burger.glif</string>
     <key>caron</key>
     <string>caron.glif</string>
     <key>cedilla</key>
@@ -412,6 +414,8 @@
     <string>eightinferior.glif</string>
     <key>eightsuperior</key>
     <string>eightsuperior.glif</string>
+    <key>ellipsisvertical</key>
+    <string>ellipsisvertical.glif</string>
     <key>emdash</key>
     <string>emdash.glif</string>
     <key>endash</key>
@@ -478,6 +482,8 @@
     <string>minus.glif</string>
     <key>minute</key>
     <string>minute.glif</string>
+    <key>moon</key>
+    <string>moon.glif</string>
     <key>mu</key>
     <string>mu.glif</string>
     <key>multiply</key>
@@ -596,6 +602,8 @@
     <string>sterling.glif</string>
     <key>summation</key>
     <string>summation.glif</string>
+    <key>sun</key>
+    <string>sun.glif</string>
     <key>three</key>
     <string>three.glif</string>
     <key>threeinferior</key>
