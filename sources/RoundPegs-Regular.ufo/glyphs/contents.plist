@@ -392,6 +392,8 @@
     <string>colon.glif</string>
     <key>comma</key>
     <string>comma.glif</string>
+    <key>command</key>
+    <string>command.glif</string>
     <key>control</key>
     <string>control.glif</string>
     <key>copyright</key>

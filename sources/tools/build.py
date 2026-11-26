@@ -102,6 +102,7 @@ MAP.update({
     'arrow-wall-left': ('arrowbarleft', [0x21E4]),
     'up-caret': ('control', [0x2303]),
     'down-caret': ('downarrowhead', [0x2304]),
+    'command': ('command', [0x2318]),
     'burger': ('burger', [0x2261, 0x2630]),
     'vertical-dots': ('ellipsisvertical', [0x22EE]),
     'not-equal': ('notequal', [0x2260]),
@@ -165,7 +166,7 @@ def rect_d(x, y, w, h, r):
             f'H{x+r}A{r} {r} 0 0 1 {x} {y+h-r}V{y+r}A{r} {r} 0 0 1 {x+r} {y}Z')
 
 
-BASE_OVERRIDE = {'moon': 22, 'moon-waxing': 22, 'mu': 20, 'zerosuperior': 32, 'foursuperior': 32, 'fivesuperior': 32, 'sixsuperior': 32, 'sevensuperior': 32, 'eightsuperior': 32, 'ninesuperior': 32, 'zeroinferior': 8, 'oneinferior': 8, 'twoinferior': 8, 'threeinferior': 8, 'fourinferior': 8, 'fiveinferior': 8, 'sixinferior': 8, 'seveninferior': 8, 'eightinferior': 8, 'nineinferior': 8, 'currency': 30, 'ordfeminine': 32, 'ordmasculine': 32, 'registered': 32, 'copyright': 32, 'section': 24, 'pilcrow': 24, 'onehalf': 24, 'onequarter': 24, 'onethird': 24, 'twothirds': 24, 'threequarters': 24}  # ink bottom sits on baseline in these 32-high frames
+BASE_OVERRIDE = {'moon': 22, 'command': 22, 'moon-waxing': 22, 'mu': 20, 'zerosuperior': 32, 'foursuperior': 32, 'fivesuperior': 32, 'sixsuperior': 32, 'sevensuperior': 32, 'eightsuperior': 32, 'ninesuperior': 32, 'zeroinferior': 8, 'oneinferior': 8, 'twoinferior': 8, 'threeinferior': 8, 'fourinferior': 8, 'fiveinferior': 8, 'sixinferior': 8, 'seveninferior': 8, 'eightinferior': 8, 'nineinferior': 8, 'currency': 30, 'ordfeminine': 32, 'ordmasculine': 32, 'registered': 32, 'copyright': 32, 'section': 24, 'pilcrow': 24, 'onehalf': 24, 'onequarter': 24, 'onethird': 24, 'twothirds': 24, 'threequarters': 24}  # ink bottom sits on baseline in these 32-high frames
 CROP = {'sun': (2, 26), 'small-square': (6, 14), 'zerosuperior': (4, 16), 'zeroinferior': (4, 16), 'oneinferior': (12, 24), 'twoinferior': (12, 24), 'threeinferior': (12, 24), 'foursuperior': (4, 16), 'fourinferior': (4, 16), 'fivesuperior': (4, 16), 'fiveinferior': (4, 16), 'sixsuperior': (4, 16), 'sixinferior': (4, 16), 'sevensuperior': (4, 16), 'seveninferior': (4, 16), 'eightsuperior': (4, 16), 'eightinferior': (4, 16), 'ninesuperior': (4, 16), 'nineinferior': (4, 16), 'onesuperior': (12, 24), 'twosuperior': (12, 24), 'threesuperior': (12, 24), 'ordfeminine': (0, 12), 'ordmasculine': (0, 12), 'registered': (4, 12), 'copyright': (0, 8), 'degree': (12, 24), 'guillemet-left': (4, 20), 'guillemet-right': (4, 20), 'pilcrow': (4, 20), 'section': (4, 20), 'guilsingle-left': (12, 20), 'guilsingle-right': (12, 20), 'arrow-updown': (4, 24), 'square-solid': (4, 16), 'square-border': (4, 16), 'tri-up': (4, 16), 'tri-up-small': (4, 16), 'tri-down': (4, 16), 'tri-down-small': (4, 16), 'tri-right': (4, 16), 'tri-left': (4, 16), 'tri-right-small': (8, 16), 'tri-left-small': (4, 12), 'lozenge': (4, 16)}  # frames with side margin: crop to ink columns
 
 
