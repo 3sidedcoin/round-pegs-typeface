@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.027
+- Changed the LY kern from -2 cells to -1 cell, so the foot of the L now stops flush against the Y (gap 0, like LV and LT) instead of sliding a cell under it, which looked too close inside words
+- Version bumped so installed copies are replaced
+
 ## 1.026
 - Added a contextual rule for I (part of `calt`): an I with a letter on both sides takes the slim 1-cell I, so PIXEL, BIG and MILLION tighten up, while a standalone I and the first or last letter of a word (I, INK, IN, IT'S) keep their bars. Accented capital Is follow the same rule. `ss05` still forces the slim I everywhere and `calt` off returns every I to the barred form
 - Version bumped so installed copies are replaced

@@ -30,5 +30,5 @@
 feature kern {
   pos @K_L @K_T -128;
   pos @K_L @K_V -128;
-  pos @K_L @K_Y -256;
+  pos @K_L @K_Y -128;
 } kern;
