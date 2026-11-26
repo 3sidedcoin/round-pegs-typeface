@@ -414,6 +414,8 @@
     <string>dollar.glif</string>
     <key>dotaccent</key>
     <string>dotaccent.glif</string>
+    <key>downarrowhead</key>
+    <string>downarrowhead.glif</string>
     <key>eight</key>
     <string>eight.glif</string>
     <key>eightinferior</key>

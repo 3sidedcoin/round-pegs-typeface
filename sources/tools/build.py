@@ -101,6 +101,7 @@ MAP.update({
     'arrow-wall': ('arrowbarright', [0x21E5]),
     'arrow-wall-left': ('arrowbarleft', [0x21E4]),
     'up-caret': ('control', [0x2303]),
+    'down-caret': ('downarrowhead', [0x2304]),
     'burger': ('burger', [0x2261, 0x2630]),
     'vertical-dots': ('ellipsisvertical', [0x22EE]),
     'not-equal': ('notequal', [0x2260]),
