@@ -1,7 +1,7 @@
 # Changelog
 
 ## 1.030
-- Added four symbols: sun ☀ (6 cells, centred on the capital height), crescent moon ☾, menu bars ≡ (also mapped to ☰) and vertical ellipsis ⋮
+- Added four symbols: sun ☀ and crescent moon ☾ (both 6 cells tall, centred on the capital height), menu bars ≡ (also mapped to ☰) and vertical ellipsis ⋮
 - 382 glyphs, 487 characters
 - Version bumped so installed copies are replaced
 
