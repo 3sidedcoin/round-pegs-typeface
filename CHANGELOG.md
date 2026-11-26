@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.028
+- Gave the short L (`L.short`, used in LL, LLL and LLY) a normal 1-cell gap; it used to run straight into the next L's stem, which looked too close. LL is now 8 cells wide instead of 7 (9 without the rule)
+- Version bumped so installed copies are replaced
+
 ## 1.027
 - Changed the LY kern from -2 cells to -1 cell, so the foot of the L now stops flush against the Y (gap 0, like LV and LT) instead of sliding a cell under it, which looked too close inside words
 - Version bumped so installed copies are replaced

@@ -32,7 +32,7 @@ MAP.update({
     'R-alt': ('R.ss01', []), 'one-alt': ('one.ss02', []),  # stylistic sets: ss01 alternate R, ss02 alternate 1
     'b-alt': ('B.ss03', []), 'P-alt': ('P.ss04', []), 'I-alt': ('I.ss05', []), 'y-alt': ('Y.ss06', []), 'X-alt': ('X.ss07', []), 'N-alt': ('N.ss08', []),
     'zero-alt': ('zero.ss09', []), 'four-alt': ('four.ss10', []), 'O-alt': ('O.ss11', []),  # ss03 B, ss04 P, ss05 slim I, ss06 narrow Y, ss07 narrow X, ss08 narrow N, ss09 slashed zero, ss10 closed four, ss11 narrow O
-    'L-short': ('L.short', []),  # calt: L before L (3 cells, zero gap); the narrow O (O.ss11) is also the calt form in O runs
+    'L-short': ('L.short', []),  # calt: L before L (3 cells, normal 1-cell gap); the narrow O (O.ss11) is also the calt form in O runs
     'five': ('5', []),  # designer-drawn 5 replaces the source digit (it already carries its own fillets)
     'colon': ('colon', []), 'comma': ('comma', []), 'period': ('period', []),
     'hyphen': ('hyphen', []), 'exclamation mark': ('exclam', []),
@@ -270,8 +270,6 @@ def main():
         W, H, shapes = load_svg(stem)
         path = combine(stem, shapes)
         adv = int(round(W * S)) + GAP
-        if name == 'L.short':  # zero trailing gap: the foot runs straight into the next L's stem
-            adv = int(round(W * S))
         flush_path, prop_adv = path, adv  # proportional 1 (pnum): ink flush left, advance = ink + 1 cell
         if name in ('1', 'one.ss02'):  # figures are tabular: centre the 3-cell ink in the 5-cell advance
             adv = 5 * GAP
