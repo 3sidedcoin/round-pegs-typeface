@@ -610,6 +610,8 @@
     <string>sixsuperior.glif</string>
     <key>slash</key>
     <string>slash.glif</string>
+    <key>soundrecording</key>
+    <string>soundrecording.glif</string>
     <key>space</key>
     <string>space.glif</string>
     <key>sterling</key>

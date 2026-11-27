@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.033
+- Redrew © and ® as full-size 6-cell marks on the baseline (−0.5 to 5.5, same frame as the sun and moon); they were 2-cell superscripts
+- Added the sound recording mark ℗ (U+2117) in the same frame
+- 390 glyphs, 495 characters
+- Version bumped so installed copies are replaced
+
 ## 1.032
 - Redrew № with a rounder, lighter ring for the o, replacing the chunky square one
 - 389 glyphs, 494 characters
