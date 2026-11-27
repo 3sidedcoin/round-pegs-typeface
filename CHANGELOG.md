@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.032
+- Redrew № with a rounder, lighter ring for the o, replacing the chunky square one
+- 389 glyphs, 494 characters
+- Version bumped so installed copies are replaced
+
 ## 1.031
 - Added the option key ⌥ (5 cells on the baseline, from the drawn SVG)
 - 389 glyphs, 494 characters
